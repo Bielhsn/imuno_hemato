@@ -1,3 +1,4 @@
+// src/pages/Cursos.jsx
 import React from 'react';
 import Navbar from '../components/Navbar'; // Importando a Navbar
 import Footer from '../components/Footer'; // Importando o Footer

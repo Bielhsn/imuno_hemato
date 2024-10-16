@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import React from 'react';
 import Navbar from '../components/Navbar';  // Importando o Navbar
 import Footer from '../components/Footer';  // Importando o Footer
