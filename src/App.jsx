@@ -10,7 +10,7 @@ import CursoSistemaRh from './pages/curso_sistemarh';
 import CursoTransfusao from './pages/curso_transfusao';
 import Combos from './pages/combos';
 
-// Importe suas outras páginas aqui
+// Importando rotas
 
 function App() {
     return (
@@ -24,7 +24,7 @@ function App() {
                 <Route path="/curso_sistemarh" element={<CursoSistemaRh />} />
                 <Route path="/curso_transfusao" element={<CursoTransfusao />} />
                 <Route path="/combos" element={<Combos />} />
-                {/* Adicione suas outras rotas aqui */}
+                {/* Adicionando rotas */}
             </Routes>
         </Router>
     );
