@@ -1,80 +1,97 @@
-/* src/pages/css/Home.css */
 .home-container {
-  font-family: Arial, sans-serif; /* Fonte da página */
-  max-width: 1200px; /* Largura máxima da página */
-  margin: 0 auto; /* Centraliza a página */
-  padding: 20px; /* Espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Alinhamento esticado */
+  justify-content: flex-start; /* Alinhado ao início */
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilizando o cabeçalho */
-.hero {
+.banner-section {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  height: 60vh;
+  width: 160vh;
+  background: url('../../assests/images/home_banner.png'); /* Caminho para a imagem de fundo */
+  background-size: auto 100%; /* Mantém a largura da imagem original e adapta a altura */
+  background-position: right; /* Alinha a imagem à direita */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  position: relative; /* Permite que elementos internos usem posicionamento absoluto, se necessário */
+  margin-right: 220px;
+}
+
+.banner-content {
+  flex: 0 1 40%; /* Permite que o conteúdo ocupe apenas 40% da largura */
+  padding-left: 20px; /* Adiciona espaçamento à esquerda */
+  display: flex; /* Para alinhar verticalmente */
+  flex-direction: column; /* Alinha o conteúdo verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  z-index: 1; /* Garante que o conteúdo fique acima do fundo */
+}
+
+.banner-content h1 {
+  font-size: 2.7em;
+  color: #a12449;
+  margin-left: 430px;
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
   position: relative;
-  text-align: center;
-  color: white; /* Cor do texto */
-  background-color: #333; /* Cor de fundo */
-  padding: 50px 0; /* Espaçamento interno */
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 400px;
 }
 
-.hero-image {
-  width: 100%; /* Largura total da imagem */
-  height: auto; /* Altura automática para manter proporções */
-  position: absolute; /* Para posicionar a imagem */
+.cta:before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+  display: block;
+  border-radius: 50px;
+  background: #a12449;
+  width: 56px;
+  height: 45px;
+  transition: all 0.3s ease;
 }
 
-/* Estilo para a seção de cursos */
-.courses {
-  padding: 40px 0; /* Espaçamento interno */
-  text-align: center; /* Centraliza o texto */
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #000000;
 }
 
-.course-grid {
-  display: grid; /* Utiliza grid para layout */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas responsivas */
-  gap: 20px; /* Espaçamento entre os itens */
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #000000;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
 }
 
-.course-item {
-  background-color: #f4f4f4; /* Cor de fundo dos itens */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  transition: transform 0.3s; /* Animação de transformação */
+.cta:hover:before {
+  width: 100%;
+  background: #a12449;
 }
 
-.course-item:hover {
-  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+.cta:hover svg {
+  transform: translateX(0);
 }
 
-/* Estilo para a seção sobre */
-.about {
-  display: flex; /* Flexbox para layout */
-  align-items: center; /* Centraliza verticalmente */
-  padding: 40px 0; /* Espaçamento interno */
-}
-
-.about-image {
-  width: 200px; /* Largura da imagem */
-  height: auto; /* Altura automática */
-  border-radius: 50%; /* Bordas arredondadas para imagem circular */
-  margin-right: 20px; /* Espaçamento entre imagem e texto */
-}
-
-/* Estilo para a seção da loja */
-.shop {
-  text-align: center; /* Centraliza o texto */
-  padding: 40px 0; /* Espaçamento interno */
-  background-color: #f9f9f9; /* Cor de fundo */
-}
-
-/* Estilo para links */
-a {
-  color: #007bff; /* Cor do link */
-  text-decoration: none; /* Remove o sublinhado */
-}
-
-a:hover {
-  text-decoration: underline; /* Sublinha ao passar o mouse */
+.cta:active {
+  transform: scale(0.95);
 }
