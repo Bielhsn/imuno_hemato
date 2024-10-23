@@ -1,33 +1,35 @@
+/* Estilo existente para a Home */
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Alinhamento esticado */
-  justify-content: flex-start; /* Alinhado ao início */
+  align-items: stretch;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
 
 .banner-section {
   display: flex;
-  align-items: center; /* Centraliza verticalmente o conteúdo */
-  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: center;
+  justify-content: flex-start;
   height: 60vh;
   width: 160vh;
-  background: url('../../assests/images/home_banner.png'); /* Caminho para a imagem de fundo */
-  background-size: auto 100%; /* Mantém a largura da imagem original e adapta a altura */
-  background-position: right; /* Alinha a imagem à direita */
-  background-repeat: no-repeat; /* Não repete a imagem */
-  position: relative; /* Permite que elementos internos usem posicionamento absoluto, se necessário */
+  
+  background: url('../../assests/images/home_banner.gif');
+  background-size: auto 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
   margin-right: 220px;
 }
 
 .banner-content {
-  flex: 0 1 40%; /* Permite que o conteúdo ocupe apenas 40% da largura */
-  padding-left: 20px; /* Adiciona espaçamento à esquerda */
-  display: flex; /* Para alinhar verticalmente */
-  flex-direction: column; /* Alinha o conteúdo verticalmente */
-  justify-content: center; /* Centraliza verticalmente */
-  z-index: 1; /* Garante que o conteúdo fique acima do fundo */
+  flex: 0 1 40%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
 }
 
 .banner-content h1 {
@@ -36,7 +38,7 @@
   margin-left: 430px;
 }
 
-/* From Uiverse.io by alexmaracinaru */ 
+/* Estilos para o botão */
 .cta {
   position: relative;
   margin: auto;
@@ -94,4 +96,140 @@
 
 .cta:active {
   transform: scale(0.95);
+}
+
+/* Novos estilos para a seção de imagem */
+.imagem-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.imagem-home {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Novos estilos para a seção de cursos */
+.cursos-section {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.cursos-titulo {
+  font-size: 24px;
+  color: #a12449;
+  margin-bottom: 20px;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.curso-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.curso-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.curso-info {
+  padding: 15px;
+}
+
+.curso-info p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a12449;
+  margin-bottom: 10px;
+}
+
+.curso-botao {
+  background-color: #a12449;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.curso-botao:hover {
+  background-color: #8a174f;
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Seção com imagem de fundo */
+.sobre-nos-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #8a174f;
+  color: white;
+  border-radius: 8px;
+}
+
+.sobre-nos-texto {
+  flex: 1;
+  padding: 20px;
+}
+
+.sobre-nos-texto h2 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.sobre-nos-texto p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.sobre-nos-botao {
+  background-color: white;
+  color: #a12449;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sobre-nos-botao:hover {
+  background-color: #a12449;
+  color: white;
+}
+
+/* Estilo para a logo */
+.sobre-nos-logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sobre-nos-logo img {
+  max-width: 80%;
+  height: auto;
 }
