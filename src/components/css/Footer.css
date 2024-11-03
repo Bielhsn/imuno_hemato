@@ -1,28 +1,29 @@
-.footer {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .footer h3 {
-    margin-bottom: 10px;
-  }
-  
-  .footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .footer a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .spotify-icon {
-    width: 25px;
-    height: 25px;
-  }
-  
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2e1e1ea;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right span {
+  font-weight: bold;
+}
+
+.footer-right a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Usa a cor do elemento pai */
+  font-weight: bold; /* Se quiser manter o texto em negrito */
+}
+
+.footer-right a:hover {
+  color: #ffffff; /* Altere conforme o esquema de cores desejado */
+}

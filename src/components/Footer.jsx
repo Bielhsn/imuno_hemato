@@ -1,26 +1,17 @@
 import React from 'react';
-import './css/Footer.css'; // CSS específico para o Footer
+import './css/Footer.css';
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="footer">
-      <h3>Faça parte da nossa comunidade!</h3>
-      <p>Aquela que não vai te abandonar no fim do plantão</p>
-      <div className="social-links">
-        <a href="https://www.instagram.com/imunoehemato/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/imunoehemato" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.linkedin.com/company/imuno-hemato" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="http://t.me/imunoehemato" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="https://anchor.fm/imunoehemato" target="_blank" rel="noopener noreferrer">
-          <img src="spotify-icon.png" alt="Spotify Podcast" className="spotify-icon" />
-        </a>
+    <footer className="footer-container">
+      <div className="footer-left">
+        <p>Imuno & Hemato © 2022 | Todos os direitos reservados</p>
       </div>
-      <p>
-        Dúvidas? Fale com a gente em <a href="mailto:contato@imunoehemato.com.br">contato@imunoehemato.com.br</a> 
-        ou mande uma direct no Instagram, a gente também responde por lá!
-      </p>
+      <div className="footer-right">
+      <p>Desenvolvido por <a href="https://github.com/Bielhsn" target="_blank" rel="noopener noreferrer">Gabriel Henrique Souza</a></p>
+      </div>
     </footer>
   );
-}
+};
 
 export default Footer;
