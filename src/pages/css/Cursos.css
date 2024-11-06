@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f9f9f9; /* Ajuste a cor de fundo conforme necessário */
+    background-color: #a01b51; /* Ajuste a cor de fundo conforme necessário */
     padding: 20px;
 }
   
@@ -11,7 +11,7 @@
 }
   
 .cursos-texto h2 {
-    color: #a01b51; /* Cor do texto */
+    color: #fff; /* Cor do texto */
     font-size: 2.7em;
     margin-bottom: 1px;
     margin-left: 145px;
@@ -22,21 +22,67 @@
     line-height: 1.5;
     margin-bottom: 20px;
     margin-left: 150px;
-}
-  
-.btn-cursos {
-    background-color: #a01b51;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 150px;
 }
   
-.btn-cursos:hover {
-    background-color: #870e3d;
+/* Estilos para o botão */
+.cta-cursos {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+.cta-cursos:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #000;
+  width: 56px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta-cursos span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.cta-cursos svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta-cursos:hover:before {
+  width: 100%;
+  background: #000;
+}
+
+.cta-cursos:hover svg {
+  transform: translateX(0);
+}
+
+.cta-cursos:active {
+  transform: scale(0.95);
 }
   
 .cursos-imagem_banner img {
@@ -56,166 +102,213 @@
   
 /* Seção dos cursos */
 
-/* #region Estilos para a seção do curso de hemácias */
-.curso-destaque-hemacias {
+.cursos-destaques {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f4f4f4;
     border-radius: 10px;
     margin: 20px 0;
-    background-color: #870e3d;
 }
-  
-.curso-imagem-hemacias {
-    flex: 1;
-    margin-right: 1px;
+/* #region Estilos para a seção do curso de hemácias */
+
+.card-hemacias {
+    width: 400px;
+    height: 350px; /* Aumentei um pouco a altura para acomodar tudo */
+    border-radius: 20px;
+    background: #f5f5f5;
     position: relative;
-}
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    margin-left: 3rem;
+  }
   
-.curso-imagem-hemacias img {
-    width: 70%;
-    height: 90%;
-    border-radius: 30px;
-    object-fit: cover;
-}
-  
-.curso-descricao-hemacias {
-    flex: 2;
-    text-align: left;
-}
-  
-.curso-descricao-hemacias h2 {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 20px;
-}
-  
-.curso-descricao-hemacias p {
-    font-size: 1.5em;
-    line-height: 1.6;
-    color: white;
-    margin-left: 1rem;
-}
-  
-.curso-botoes-hemacias {
+  .card-details-hemacias {
     display: flex;
-    gap: 10px;
-}
+    flex-direction: column; /* Alinha os itens de forma vertical */
+    justify-content: space-between; /* Distribui o espaço entre imagem, título e texto */
+    align-items: center; /* Centraliza o conteúdo */
+    color: black;
+    height: 100%;
+    width: 400px;
+  }
   
-.botao-inscrever-hemacias {
-    background-color: white;
-    color: #a12449;
-    padding: 10px 20px;
-    border: none;
-    font-size: 1em;
+  .img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
+  }
+  
+  .text-container-hemacias {
+    display: flex;
+    flex-direction: column; /* Garante que o título fique acima do texto */
+    justify-content: center;
+    text-align: center; /* Centraliza o título e o texto */
+  }
+  
+  .text-title-hemacias {
+    font-size: 1.8em;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-.botao-inscrever-hemacias:hover {
-    background-color: #751d37;
-    color: white;
-}
+    margin: 0; /* Remove qualquer margem extra ao redor do título */
+    margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
+  }
   
-.botao-saiba-mais-hemacias {
-    background-color: white;
-    color: #a12449;
-    padding: 10px 20px;
+  .text-body-hemacias {
+    color: rgb(134, 134, 134);
+  }
+  
+  .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
     border: none;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 5px;
+    background-color: #a01b51;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-}
+  }
   
-.botao-saiba-mais-hemacias:hover {
-    background-color: #751d37;
-    color: white;
-}
+  .card-hemacias:hover {
+    border-color: #a01b51;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .card-hemacias:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+  
+  
 /* #endregion Estilos para a seção do curso de hemácias */
 
 /* #region Estilos para a seção do curso de primeira temporada */
-.curso-destaque-primeira-temp {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    margin: 20px 0;
-    background-color: #870e3d;
-  }
-  
-  .curso-imagem-primeira-temp {
-    flex: 1;
-    margin-right: 1px;
+.card-primeira {
+    width: 400px;
+    height: 350px; /* Aumentei um pouco a altura para acomodar tudo */
+    border-radius: 20px;
+    background: #f5f5f5;
     position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    margin-right: 10rem;
+    margin-left: 10rem;
   }
   
-  .curso-imagem-primeira-temp img {
-    width: 70%;
-    height: 90%;
-    border-radius: 30px;
-    object-fit: cover;
-  }
-  
-  .curso-descricao-primeira-temp {
-    flex: 2;
-    text-align: left;
-  }
-  
-  .curso-descricao-primeira-temp h2 {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  .curso-descricao-primeira-temp p {
-    font-size: 1.5em;
-    line-height: 1.6;
-    color: white;
-    margin-left: 1rem;
-  }
-  
-  .curso-botoes-primeira-temp {
+  .card-details-primeira {
     display: flex;
-    gap: 10px;
+    flex-direction: column; /* Alinha os itens de forma vertical */
+    justify-content: space-between; /* Distribui o espaço entre imagem, título e texto */
+    align-items: center; /* Centraliza o conteúdo */
+    color: black;
+    height: 100%;
+    width: 400px;
   }
   
-  .botao-inscrever-primeira-temp {
-    background-color: white;
-    color: #a12449;
-    padding: 10px 20px;
-    border: none;
-    font-size: 1em;
+  .text-container-primeira {
+    display: flex;
+    flex-direction: column; /* Garante que o título fique acima do texto */
+    justify-content: center;
+    text-align: center; /* Centraliza o título e o texto */
+  }
+  
+  .text-title-primeira {
+    font-size: 1.8em;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  .botao-inscrever-primeira-temp:hover {
-    background-color: #751d37;
-    color: white;
+    margin: 0; /* Remove qualquer margem extra ao redor do título */
+    margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
   }
   
-  .botao-saiba-mais-primeira-temp {
-    background-color: white;
-    color: #a12449;
-    padding: 10px 20px;
-    border: none;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  .text-body-primeira {
+    color: rgb(134, 134, 134);
   }
   
-  .botao-saiba-mais-primeira-temp:hover {
-    background-color: #751d37;
-    color: white;
+  .card-primeira:hover {
+    border-color: #a01b51;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .card-primeira:hover .card-button{
+    transform: translate(-50%, 50%);
+    opacity: 1;
   }
 /* #endregion Estilos para a seção do curso de primeira temporada */
+
+/* #region Estilos para a seção do curso de segunda temporada */
+.card-segunda {
+    width: 400px;
+    height: 350px; /* Aumentei um pouco a altura para acomodar tudo */
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    margin-right: 1000rem;
+  }
+  
+  .card-details-segunda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    height: 100%;
+    width: 400px;
+  }
+  
+  .text-container-segunda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .text-title-segunda {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  
+  .text-body-segunda {
+    color: rgb(134, 134, 134);
+  }
+  
+  .card-segunda:hover {
+    border-color: #a01b51;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .card-segunda:hover .card-button{
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+  .img-segunda {
+    width: 100px;
+    height: 80px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
+    margin-left: 4rem;
+  }
+  
+/* #endregion Estilos para a seção do curso de segunda temporada */
+
+.img-rh {
+    width: 180px;
+    height: 80px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    margin-right: 20px;
+    margin-top: 2rem;
+  }

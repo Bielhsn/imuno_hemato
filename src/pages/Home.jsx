@@ -9,14 +9,13 @@ import primeira_temp from '../assests/images/foto_curso_precisamos.png';
 import segunda_temp from '../assests/images/foto_curso_temp2.png';
 import hemoterapia from '../assests/images/hemoterapia_curso.jpg';
 import logo_rosa from '../assests/images/logotipo_preto.png';
-// Adicione outras importações de imagens conforme necessário
 
 const Home = () => {
   return (
     <div className="home-container">
       <Navbar />
 
-      {/* Seção do banner existente */}
+      {/* Seção do banner */}
       <section className="banner-section">
         <div className="banner-content">
           <h1>Você mais próximo da bancada transfusional!</h1>
@@ -30,7 +29,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Seção de cursos adicionada */}
+      {/* Seção de cursos */}
       <section className="cursos-section">
         <h2 className="cursos-titulo">Pra você amar ainda mais o mundo da imunologia e hematologia.</h2>
         <div className="cursos-grid">
