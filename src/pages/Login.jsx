@@ -12,10 +12,17 @@ const Login = ({ setUserLoggedIn }) => {
   const handleSubmit = async (event) => {
     event.preventDefault(); // Impede o comportamento padrão de recarregar a página
     try {
+      // Envia a requisição para o backend
       const response = await axios.post('http://localhost:5000/api/login', { username, password });
-      localStorage.setItem('token', response.data.token); // Armazena o token
-      navigate('/home'); // Redireciona para a página inicial
+      
+      // Armazena o token no localStorage se a autenticação for bem-sucedida
+      localStorage.setItem('token', response.data.token);
+      
+      // Redireciona para a página inicial
+      navigate('/'); // Redireciona para a página home após login
     } catch (error) {
+      // Se houver erro, exibe uma mensagem no console e um alerta para o usuário
+      console.error('Erro ao tentar fazer login:', error);
       alert('Usuário ou senha incorretos');
     }
   };
