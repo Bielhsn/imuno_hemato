@@ -133,7 +133,7 @@
   flex-grow: 1;
   font-weight: bold;
   font-size: 1.4em;
-  margin-top: 20px;
+  margin-right: 14.5rem;
 }
 .navbar-profile-login a {
   color: rgb(0, 0, 0);                     /* Cor dos links */
@@ -226,8 +226,6 @@
   margin-right: 15rem;
   margin-left: 30px;
 }
-
-/* popup settings 👆 */
 
 .popup {
   display: inline-block;
