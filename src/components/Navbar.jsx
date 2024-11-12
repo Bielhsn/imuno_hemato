@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './css/Navbar.css';  // Certifique-se de que o caminho do CSS está correto
 import logo from '../assests/images/imuno_hemato-logo.png';  // Caminho da imagem do logo
 
-const Navbar = () => {
+const Navbar = ({userLoggedIn, setUserLoggedIn}) => {
+  const handleLogout = () => {
+    setUserLoggedIn(false);
+    window.location.reload();
+  };
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <img src={logo} alt="Logo" />
       </div>
       <div className="navbar-links">
-        <a href="/">Home</a>
-        <a href="/cursos">Cursos</a>
-        <a href="/abocast">ABOcast</a>
-        <a href="/sobre">Sobre</a>
+        <Link to="/">Home</Link>
+        <Link to="/cursos">Cursos</Link>
+        <Link to="/Podcast">ABOcast</Link>
+        <Link to="/SobreNos">Sobre</Link>
       </div>
+      {userLoggedIn ? (
+        <div className="navbar-profile">
+          <Link to="/" onClick={handleLogout}>Sair</Link>
+        </div>
+      ) : (
+        <div className="navbar-profile">
+          <Link to="/login">Login</Link>
+        </div>
+      )}
       <div className="navbar-spacer"></div> {/* Espaçador vazio para preencher espaço à direita */} 
       <ul class="example-2">
               {/* Facebook */}
