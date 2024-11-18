@@ -51,7 +51,7 @@
 }
 
 /* Estilos para o botão */
-.cta {
+.cta-sobre {
   position: relative;
   margin: auto;
   padding: 12px 18px;
@@ -62,7 +62,7 @@
   margin-left: 100px;
 }
 
-.cta:before {
+.cta-sobre:before {
   content: "";
   position: absolute;
   top: 0;
@@ -75,7 +75,7 @@
   transition: all 0.3s ease;
 }
 
-.cta span {
+.cta-sobre span {
   position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
@@ -84,7 +84,7 @@
   color: #000000;
 }
 
-.cta svg {
+.cta-sobre svg {
   position: relative;
   top: 0;
   margin-left: 10px;
@@ -97,16 +97,16 @@
   transition: all 0.3s ease;
 }
 
-.cta:hover:before {
+.cta-sobre:hover:before {
   width: 100%;
   background: #a12449;
 }
 
-.cta:hover svg {
+.cta-sobre:hover svg {
   transform: translateX(0);
 }
 
-.cta:active {
+.cta-sobre:active {
   transform: scale(0.95);
 }
 

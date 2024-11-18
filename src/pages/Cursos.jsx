@@ -19,14 +19,7 @@ const Cursos = () => {
             <section class="cursos-section_banner">
                 <div class="cursos-texto">
                     <h2>Educação sem distância.</h2>
-                    <p>A imuno&hemato tem como principal objetivo tornar acessível o conhecimento e a educação em imuno-hematologia e hemoterapia por todos que querem e precisam aprender.</p>
-                    <button className="cta-cursos" onClick={() => window.location.href = '/cursos'}>
-                        <span>Conheça os cursos</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                            <path d="M1,5 L11,5"></path>
-                            <polyline points="8 1 12 5 8 9"></polyline>
-                        </svg>
-                    </button>                
+                    <p>A imuno&hemato tem como principal objetivo tornar acessível o conhecimento e a educação em imuno-hematologia e hemoterapia por todos que querem e precisam aprender.</p>            
                 </div>
                 <div class="cursos-imagem_banner">
                     <img src={curso_banner} alt='Cursos'></img>

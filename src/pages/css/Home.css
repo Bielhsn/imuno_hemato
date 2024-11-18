@@ -34,7 +34,7 @@
 .banner-content h1 {
   font-size: 3.5em;
   color: #a12449;
-  margin-left: 430px;
+  margin-left: 380px;
 }
 
 /* Estilos para o botão */
@@ -46,7 +46,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  margin-left: 400px;
+  margin-left: 380px;
 }
 
 .cta:before {

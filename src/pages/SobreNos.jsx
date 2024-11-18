@@ -15,7 +15,7 @@ const SobreNos = () => {
           <p>
           31 anos, biomédica com especialização em imuno-hematologia pela ABHH e vestibulanda de medicina. Com 10 anos de experiência em banco de sangue e terapia celular, possui mestrado pela UNIFESP, com publicações importantes na área. Atualmente, desenvolve pesquisa sobre o sistema Rh na UNIFESP e Fundação Pró Sangue, em busca do título de doutora. Também leciona imuno-hematologia na pós-graduação da Universidade São Camilo. Apaixonada por educação e ciência, acredita na transformação do mundo por meio do conhecimento.          
           </p>
-          <button className="cta" onClick={() => window.location.href = '/cursos'}>
+          <button className="cta-sobre" onClick={() => window.location.href = '/cursos'}>
             <span>Ver Currículo</span>
             <svg width="15px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
