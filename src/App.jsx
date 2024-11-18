@@ -15,7 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cursos" element={<Cursos />} />
-                <Route path="/podscast" element={<Podcast />} />
+                <Route path="/Podcast" element={<Podcast />} />
                 <Route path="/SobreNos" element={<SobreNos />} />
                 <Route path="/login" element={<Login />} />
                 {/* Adicionando rotas */}

@@ -1,0 +1,73 @@
+.sobre-nos {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .whatsapp-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-link img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile {
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .profile h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .profile button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .profile button:hover {
+    background-color: #0056b3;
+  }  
