@@ -5,6 +5,7 @@ import "./css/Hemacias.css";
 import hemacias_banner from "../assests/images/hemacias_perfil.gif";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
+import "videojs-youtube";
 
 const Hemacias = () => {
   const videoNode = useRef(null); // Referência ao elemento de vídeo
@@ -28,11 +29,24 @@ const Hemacias = () => {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]); // Estado para o vídeo principal
 
   useEffect(() => {
-    // Inicializa o player do Video.js
+    // Verifica se o elemento <video> está disponível no DOM
+    if (!videoNode.current) {
+      console.warn("O elemento <video> ainda não está disponível no DOM.");
+      return;
+    }
+
+    // Remove instâncias antigas do player para evitar duplicação
+    if (playerRef.current) {
+      playerRef.current.dispose();
+    }
+
+    // Inicializa o Video.js com o vídeo atual
     playerRef.current = videojs(videoNode.current, {
-      techOrder: ["youtube"], // Define o YouTube como tecnologia
+      techOrder: ["youtube"], // Prioriza o YouTube como tecnologia
       autoplay: false,
       controls: true,
+      responsive: true,
+      fluid: true,
       sources: [
         {
           src: `https://www.youtube.com/watch?v=${selectedVideo.id}`,
@@ -40,20 +54,23 @@ const Hemacias = () => {
         },
       ],
       youtube: {
-        modestbranding: 1, // Remove logo do YouTube
-        rel: 0, // Não exibe vídeos relacionados
-        showinfo: 0, // Remove informações extras
+        modestbranding: 1, // Remove o logo do YouTube
+        rel: 0, // Desativa vídeos relacionados
+        showinfo: 0, // Remove informações do vídeo
+        disablekb: 1, // Desativa teclado do YouTube
       },
     });
 
-    // Atualiza o vídeo quando o selectedVideo mudar
-    playerRef.current.src({
-      src: `https://www.youtube.com/watch?v=${selectedVideo.id}`,
-      type: "video/youtube",
+    // Log de inicialização
+    console.log("Player Video.js inicializado com sucesso.");
+
+    // Listener para erros
+    playerRef.current.on("error", () => {
+      console.error("Erro ao carregar o vídeo.");
     });
 
     return () => {
-      // Limpa o player ao desmontar o componente
+      // Remove o player ao desmontar
       if (playerRef.current) {
         playerRef.current.dispose();
       }
@@ -99,7 +116,9 @@ const Hemacias = () => {
           {videos.map((video, index) => (
             <div
               key={index}
-              className="video-item"
+              className={`video-item ${
+                selectedVideo.id === video.id ? "active" : ""
+              }`}
               onClick={() => setSelectedVideo(video)} // Atualiza o vídeo principal
             >
               <p>{video.title}</p>
