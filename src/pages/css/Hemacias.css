@@ -1,0 +1,96 @@
+.hemacias-section_banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a01b51; /* Ajuste a cor de fundo conforme necessário */
+    padding: 20px;
+}
+  
+.hemacias-texto {
+    max-width: 50%;
+}
+  
+.hemacias-texto h2 {
+    color: #fff; /* Cor do texto */
+    font-size: 2.7em;
+    margin-bottom: 1px;
+    margin-left: 145px;
+}
+  
+.hemacias-texto p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    color: #fff;
+}
+
+.hemacias-imagem_banner img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60vh;
+    width: 60vh;
+    background-size: auto 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 220px;
+    border: none;
+    border-radius: 0;
+}
+
+.hemacia-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .video-principal {
+    width: 70rem;
+    margin-bottom: 20px;
+    height: 550px;
+  }
+  
+  .video-principal iframe {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-principal h3 {
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .video-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .video-item {
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .video-item img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .video-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  

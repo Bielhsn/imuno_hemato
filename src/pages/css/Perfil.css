@@ -1,0 +1,49 @@
+.perfil-section_banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Ajuste a cor de fundo conforme necessário */
+    padding: 20px;
+}
+  
+.perfil-texto {
+    max-width: 50%;
+}
+  
+.perfil-texto h2 {
+    color: #a01b51; /* Cor do texto */
+    font-size: 2.7em;
+    margin-bottom: 1px;
+    margin-left: 145px;
+}
+  
+.perfil-texto p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    color: #a01b51;
+    font-weight: bold;
+}
+
+.perfil-imagem_banner img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60vh;
+    width: 60vh;
+    background-size: auto 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 220px;
+    border: none;
+    border-radius: 0;
+}
+.cursos-destaques-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #a01b51;
+}
