@@ -29,48 +29,49 @@ const Hemacias = () => {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]); // Estado para o vídeo principal
 
   useEffect(() => {
-    // Verifica se o elemento <video> está disponível no DOM
-    if (!videoNode.current) {
-      console.warn("O elemento <video> ainda não está disponível no DOM.");
-      return;
-    }
+    const initializePlayer = () => {
+      if (videoNode.current) {
+        // Remove qualquer instância existente
+        if (playerRef.current) {
+          playerRef.current.dispose();
+        }
 
-    // Remove instâncias antigas do player para evitar duplicação
-    if (playerRef.current) {
-      playerRef.current.dispose();
-    }
+        // Inicializar o Video.js
+        playerRef.current = videojs(videoNode.current, {
+          techOrder: ["youtube"],
+          autoplay: false,
+          controls: true,
+          responsive: true,
+          fluid: true,
+          sources: [
+            {
+              src: `https://www.youtube.com/watch?v=${selectedVideo.id}`,
+              type: "video/youtube",
+            },
+          ],
+          youtube: {
+            modestbranding: 1, // Remove o logo do YouTube
+            rel: 0, // Remove vídeos relacionados
+            showinfo: 0, // Remove informações do vídeo
+            disablekb: 1, // Desativa o teclado do YouTube
+            iv_load_policy: 3, // Remove anotações
+            fs: 0, // Remove botão de fullscreen nativo do YouTube
+          },
+        });
 
-    // Inicializa o Video.js com o vídeo atual
-    playerRef.current = videojs(videoNode.current, {
-      techOrder: ["youtube"], // Prioriza o YouTube como tecnologia
-      autoplay: false,
-      controls: true,
-      responsive: true,
-      fluid: true,
-      sources: [
-        {
-          src: `https://www.youtube.com/watch?v=${selectedVideo.id}`,
-          type: "video/youtube",
-        },
-      ],
-      youtube: {
-        modestbranding: 1, // Remove o logo do YouTube
-        rel: 0, // Desativa vídeos relacionados
-        showinfo: 0, // Remove informações do vídeo
-        disablekb: 1, // Desativa teclado do YouTube
-      },
-    });
+        playerRef.current.on("error", () => {
+          console.error("Erro ao carregar o vídeo.");
+        });
+      } else {
+        console.warn("O elemento <video> ainda não está presente no DOM.");
+      }
+    };
 
-    // Log de inicialização
-    console.log("Player Video.js inicializado com sucesso.");
-
-    // Listener para erros
-    playerRef.current.on("error", () => {
-      console.error("Erro ao carregar o vídeo.");
-    });
+    // Aguardar a próxima renderização para garantir que o DOM está pronto
+    const timeout = setTimeout(initializePlayer, 0);
 
     return () => {
-      // Remove o player ao desmontar
+      clearTimeout(timeout);
       if (playerRef.current) {
         playerRef.current.dispose();
       }

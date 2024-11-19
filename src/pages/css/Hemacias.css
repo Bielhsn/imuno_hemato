@@ -56,6 +56,9 @@
 .video-principal .video-js {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: block !important;
+    visibility: visible !important;
+    background: #000;
 }
 
 .video-principal h3 {
