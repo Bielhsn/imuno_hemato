@@ -112,7 +112,7 @@ const Cursos = () => {
                     </div>
 
                 {/* Seção Dominando a Hemoterapia */}
-                <div className="card-segunda">
+                <div className="card-segunda" id="card-dominando">
                         <div className="card-details-segunda">
                         <img src={curso_genotipagem} className="img" alt="Curso Hemácias" />
                             <div className="text-container-segunda">
