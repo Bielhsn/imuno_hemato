@@ -27,3 +27,23 @@
 .footer-right a:hover {
   color: #a12449; /* Altere conforme o esquema de cores desejado */
 }
+
+@media screen and (max-width: 1200px) {
+  .footer-container {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-container {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}

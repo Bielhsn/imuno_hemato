@@ -40,7 +40,7 @@ const Cursos = () => {
                                 </p>
                             </div>
                         </div>
-                        <a href="https://pay.hotmart.com/B48662820F?checkoutMode=10">
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/desvendando-o-painel-de-hemacias/B48662820F">
                             <button className="card-button">Inscreva-se agora!</button>
                         </a>
                     </div>
@@ -56,7 +56,7 @@ const Cursos = () => {
                                 </p>
                             </div>
                         </div>
-                        <a href="https://pay.hotmart.com/B48662820F?checkoutMode=10">
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/serie-imuno-e-hemato-1atemporada/S80660889W">
                             <button className="card-button">Inscreva-se agora!</button>
                         </a>
                     </div>
@@ -72,35 +72,35 @@ const Cursos = () => {
                                 </p>
                             </div>
                         </div>
-                        <a href="https://pay.hotmart.com/B48662820F?checkoutMode=10">
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/serie-imuno-e-hemato-2a-temporada/G85816407E">
                             <button className="card-button">Inscreva-se agora!</button>
                         </a>
                     </div>
                 </section>
 
                 <section className="cursos-destaques">
-                    {/* Seção terceira temporada */}
+                    {/* Seção Transfusão em recém-nascidos e pediatria */}
                 <div className="card-hemacias">
                         <div className="card-details-hemacias">
                         <img src={curso_terceira_temp} className="img" alt="Curso Hemácias" />
                             <div className="text-container-hemacias">
-                                <p className="text-title-hemacias">Imuno e hemato: para além da rotina.</p>
+                                <p className="text-title-hemacias">Transfusão em recém-nascidos e pediatria.</p>
                                 <p className="text-body-hemacias">
-                                Nesse curso, você vai complementar a sua formação em imuno-hematologia e aprender de forma objetiva e com base científica a resolver problemas avançados que nos deparamos na bancada, aqueles além da rotina mesmo. 
+                                Ideal para profissionais que desejam aprofundar seus conhecimentos sobre transfusão de sangue em neonatos e pediatria, abordando tópicos essenciais e específicos para esse público.
                                 </p>
                             </div>
                         </div>
-                        <a href="https://pay.hotmart.com/B48662820F?checkoutMode=10">
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/transfusao-em-recem-nascidos-e-pediatria/G96358968W">
                             <button className="card-button">Inscreva-se agora!</button>
                         </a>
                     </div>
 
-                {/* Seção Descomplicando o sistema Rh */}
+                {/* Seção Atualização em sistema Rh */}
                 <div className="card-primeira">
                         <div className="card-details-primeira">
                         <img src={curso_rh} className="img-rh" alt="Primeira temporada" />
                             <div className="text-container-primeira">
-                                <p className="text-title-primeira"> Descomplicando o sistema Rh:</p>
+                                <p className="text-title-primeira"> Atualização em sistema Rh.</p>
                                 <p className="text-body-primeira">
                                 Aqui você vai conhecer bem mais sobre esse sistema que tem tanta particularidade que só mesmo quem estuda ele exclusivamente pode te contar! De forma leve e objetiva, você vai desmistificar a complexidade do Rh.
                                 </p>
@@ -111,18 +111,18 @@ const Cursos = () => {
                         </a>
                     </div>
 
-                {/* Seção Genotipagem de grupos sanguíneos */}
+                {/* Seção Dominando a Hemoterapia */}
                 <div className="card-segunda">
                         <div className="card-details-segunda">
                         <img src={curso_genotipagem} className="img" alt="Curso Hemácias" />
                             <div className="text-container-segunda">
-                                <p className="text-title-segunda">Genotipagem de grupos sanguíneos: </p>
-                                <p className="text-body-segunda">
-                                    Como o nome já diz, vamos te mostrar todas as técnicas de genotipagem e explicar como elas funcionam, de um jeito direto e sem complicação, do jeitinho que você gosta!
+                                <p className="text-title-segunda">Dominando a Hemoterapia: Fundamentos e práticas na enfermagem. </p>
+                                <p className="text-body-segunda"> 
+                                    O curso aborda hemoterapia aplicada aos cuidados assistenciais, desde a coleta até a transfusão, destacando etapas técnicas e essenciais do processo transfusional. É indicado para profissionais técnicos que desejam entender a assistência e vice-versa, unindo enfermagem e técnicos de bancada.
                                 </p>
                             </div>
                         </div>
-                        <a href="https://pay.hotmart.com/B48662820F?checkoutMode=10">
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/dominando-a-hemoterapia/Y92002606B">
                             <button className="card-button">Inscreva-se agora!</button>
                         </a>
                     </div>

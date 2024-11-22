@@ -223,7 +223,7 @@
   }
   
   .text-title-primeira {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
     margin: 0; /* Remove qualquer margem extra ao redor do título */
     margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
@@ -312,3 +312,45 @@
     margin-right: 20px;
     margin-top: 2rem;
   }
+
+  @media screen and (max-width: 1200px) {
+    .cursos-texto h2 {
+      font-size: 2em;
+      margin-left: 100px;
+    }
+  
+    .cursos-texto p {
+      margin-left: 80px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cursos-destaques {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .card-hemacias, .card-primeira, .card-segunda {
+      width: 100%;
+      margin: 0 auto 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cursos-texto h2, .cursos-titulo {
+      font-size: 1.5em;
+      text-align: center;
+    }
+  
+    .cursos-texto p {
+      font-size: 0.9rem;
+      margin: 10px;
+    }
+  
+    .card-hemacias, .card-primeira, .card-segunda {
+      margin: 10px auto;
+    }
+  }
+  

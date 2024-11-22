@@ -37,15 +37,18 @@ const Home = () => {
             <img src={hemacias} alt="Desvendando o painel de hemácias" />
             <div className="curso-info">
               <p>Desvendando o painel de hemácias</p>
+              <a href='https://hotmart.com/pt-br/marketplace/produtos/desvendando-o-painel-de-hemacias/B48662820F'>
               <button className="curso-botao">SE INSCREVA AGORA</button>
+              </a>
             </div>
           </div>
-
           <div className="curso-card">
             <img src={primeira_temp} alt="Imuno e Hemato: Preciso mesmo saber disso?" />
             <div className="curso-info">
               <p>Imuno e Hemato: Preciso mesmo saber disso?</p>
+              <a href='https://hotmart.com/pt-br/marketplace/produtos/serie-imuno-e-hemato-1atemporada/S80660889W'>
               <button className="curso-botao">SE INSCREVA AGORA</button>
+              </a>
             </div>
           </div>
 
@@ -53,7 +56,9 @@ const Home = () => {
             <img src={segunda_temp} alt="Imuno e Hemato: A essência da Imuno-Hematologia" />
             <div className="curso-info">
               <p>Imuno e Hemato: A essência da Imuno-Hematologia</p>
+              <a href='https://hotmart.com/pt-br/marketplace/produtos/serie-imuno-e-hemato-2a-temporada/G85816407E'>
               <button className="curso-botao">SE INSCREVA AGORA</button>
+              </a>
             </div>
           </div>
 
@@ -61,7 +66,9 @@ const Home = () => {
             <img src={hemoterapia} alt="Dominando a Hemoterapia" />
             <div className="curso-info">
               <p>Dominando a Hemoterapia</p>
+              <a href='https://hotmart.com/pt-br/marketplace/produtos/dominando-a-hemoterapia/Y92002606B'>
               <button className="curso-botao">SE INSCREVA AGORA</button>
+              </a>
             </div>
           </div>
         </div>
@@ -77,7 +84,9 @@ const Home = () => {
               experiência de 10 anos em hemoterapia, imuno-hematologia e terapia celular. Com o objetivo
               de dividir experiências e traduzir de forma leve e divertida o “cientifiquês” e o “imuno-hematologês”. Sejam bem-vindos!
             </p>
+            <a href='/SobreNos'>
             <button className="sobre-nos-botao">Saiba mais sobre nós</button>
+            </a>
           </div>
           <div className="sobre-nos-logo">
             <img src={logo_rosa} alt="Logo Imuno & Hemato" />

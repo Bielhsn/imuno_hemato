@@ -11,11 +11,17 @@ const SobreNos = () => {
       {/* Sobre mim */}
         <section className="banner-section-sobre">
           <div className="banner-content-sobre">
-          <h1>Thamy Caroline da Silva</h1>
+          <h1>Thamy Caroline de Souza Silva</h1>
           <p>
-          31 anos, biomédica com especialização em imuno-hematologia pela ABHH e vestibulanda de medicina. Com 10 anos de experiência em banco de sangue e terapia celular, possui mestrado pela UNIFESP, com publicações importantes na área. Atualmente, desenvolve pesquisa sobre o sistema Rh na UNIFESP e Fundação Pró Sangue, em busca do título de doutora. Também leciona imuno-hematologia na pós-graduação da Universidade São Camilo. Apaixonada por educação e ciência, acredita na transformação do mundo por meio do conhecimento.          
+            Sou biomédica, Mestra e Doutora em Ciências da Saúde pela UNIFESP, com especialização em imuno-hematologia. Atualmente, sou professora na pós-graduação em Hematologia e Hemoterapia no Centro Universitário São Camilo – SP e idealizadora da IMUNO&HEMATO, a maior página de imuno-hematologia no Instagram, que agora também atua como consultoria e educação em hemoterapia.  
+
+            Desde 2012, dedico-me à hemoterapia, acumulando ampla experiência no ciclo do sangue, terapia celular e, especialmente, imuno-hematologia, minha verdadeira paixão. Minhas dissertações sobre o sistema Rh me renderam os títulos de Mestra e Doutora, além de publicações de destaque em revistas como *Blood Transfusion* (2020) e *Immunohematology* (2023). Como coautora, também publiquei na *Vox Sanguinis* e *Journal of Clinical Laboratory Analysis* (2018 e 2019).  
+
+            Meu trabalho foi reconhecido em importantes congressos da área, com o 1º lugar no prêmio de melhor trabalho em Hemoterapia no Congresso HEMORIO 2024 e destaque entre os 10 melhores trabalhos no Congresso HEMO 2023.  
+
+            Minha missão é transformar o universo da imuno-hematologia por meio da educação e da ciência.            
           </p>
-          <button className="cta-sobre" onClick={() => window.location.href = '/cursos'}>
+          <button className="cta-sobre" onClick={() => window.location.href = 'http://lattes.cnpq.br/6895906608002328'}>
             <span>Ver Currículo</span>
             <svg width="15px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
@@ -32,9 +38,10 @@ const SobreNos = () => {
           <div className="como-comecou-texto">
             <h2>Quem é a imuno&hemato?</h2>
             <p>
-            A imuno&hemato nasceu no Instagram em junho de 2020, idealizada por Thamy, uma biomédica com 10 anos de experiência em hemoterapia, imuno-hematologia e terapia celular. O projeto surgiu com o propósito de compartilhar conhecimentos e traduzir, de forma leve e divertida, o “cientifiquês” e o “imuno-hematologês”.
-            Desde o início, percebi as dificuldades básicas que eu e meus colegas enfrentávamos, além das diferentes formas que cada pessoa tem de aprender. Assim, decidi criar a página no Instagram para transmitir a imuno-hematologia de maneira objetiva, prática e acessível, quebrando barreiras e conectando pessoas de diferentes regiões do Brasil e do mundo.
-            Com o apoio de amigos e profissionais da área, a imuno&hemato tem como missão acolher, inspirar e fazer você se sentir parte dessa comunidade. De forma simples e acessível, estaremos ao seu lado em novas jornadas a partir de agora.
+            A imuno&hemato nasceu no instagram em junho/2020, idealizada pela Thamy, biomédica, mestra e doutora pela UNIFESP e especialista em imuno-hematologia. Com o objetivo de dividir experiências e traduzir de forma leve e divertida o “cientifiquês” e o “imuno-hematologuês”.        
+            </p>
+            <p className="welcome">
+            Sejam bem-vindos!
             </p>
           </div>
           <div className="sobre-nos-logo">
