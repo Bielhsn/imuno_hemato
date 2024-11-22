@@ -15,7 +15,7 @@ const SobreNos = () => {
           <p>
             Sou biomédica, Mestra e Doutora em Ciências da Saúde pela UNIFESP, com especialização em imuno-hematologia. Atualmente, sou professora na pós-graduação em Hematologia e Hemoterapia no Centro Universitário São Camilo – SP e idealizadora da IMUNO&HEMATO, a maior página de imuno-hematologia no Instagram, que agora também atua como consultoria e educação em hemoterapia.  
 
-            Desde 2012, dedico-me à hemoterapia, acumulando ampla experiência no ciclo do sangue, terapia celular e, especialmente, imuno-hematologia, minha verdadeira paixão. Minhas dissertações sobre o sistema Rh me renderam os títulos de Mestra e Doutora, além de publicações de destaque em revistas como *Blood Transfusion* (2020) e *Immunohematology* (2023). Como coautora, também publiquei na *Vox Sanguinis* e *Journal of Clinical Laboratory Analysis* (2018 e 2019).  
+            Desde 2012, dedico-me à hemoterapia, acumulando ampla experiência no ciclo do sangue, terapia celular e, especialmente, imuno-hematologia, minha verdadeira paixão. Minhas dissertações sobre o sistema Rh me renderam os títulos de Mestra e Doutora, além de publicações de destaque em revistas como Blood Transfusion (2020) e Immunohematology (2023). Como coautora, também publiquei na Vox Sanguinis e Journal of Clinical Laboratory Analysis (2018 e 2019).  
 
             Meu trabalho foi reconhecido em importantes congressos da área, com o 1º lugar no prêmio de melhor trabalho em Hemoterapia no Congresso HEMORIO 2024 e destaque entre os 10 melhores trabalhos no Congresso HEMO 2023.  
 
