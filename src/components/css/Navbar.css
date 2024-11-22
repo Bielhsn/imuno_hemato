@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 6rem;
+  margin-right: 8rem;
 }
 
 .example-1 .icon-content {
@@ -746,52 +746,59 @@
 /* #region Responsivo 480px */
 @media screen and (max-width: 480px) {
   .navbar {
-    display: flex;                     /* Usando flexbox para layout */
-    align-items: center;              /* Alinha itens verticalmente ao centro */
-    padding: 50px 5px;               /* Padding para a navbar */
-    background-color: #e2e1e1ea;           /* Cor de fundo da navbar */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Mantém espaço entre os itens */
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .navbar-logo {
-    flex: 0 0 auto;                   /* O logo não deve crescer ou encolher */
+    flex: 1 100%; /* O logo ocupa uma linha inteira */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   
   .navbar-logo img {
-    height: 65px;
-    margin-left: 300px;
-    margin-right: 300px;
+    height: 30px;
+    margin: 0;
+    margin-left: 5px;
+    
   }
   
   .navbar-links {
-    display: flex;                    /* Flexbox para os links */
-    justify-content: center;          /* Centraliza os links horizontalmente */
-    flex-grow: 1;
-    font-weight: bold;
-    font-size: 1.4em;
-  }
-  
-  .navbar-spacer {
-    flex: 1;                          /* Preenche o espaço à direita do logo */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-left: 2px;
   }
   
   .navbar-links a {
-    color: rgb(0, 0, 0);                     /* Cor dos links */
-    text-decoration: none;            /* Remove o sublinhado */
-    margin: 0 15px;                  /* Espaçamento horizontal entre os links */
+    font-size: 0.6em; /* Ajusta o tamanho da fonte */
+    margin: 5px 5px; /* Espaçamento menor */
   }
   
   .example-1 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: rem;
+    justify-content: center;
+    margin-right: 10px;
   }
   
   .example-1 .icon-content {
-    margin: 0 10px;
-    position: relative;
+    margin: 0;
   }
   
+  .example-1 .icon-content a {
+    width: 10px; /* Ajusta o tamanho do ícone */
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .example-1 .icon-content .tooltip {
     position: absolute;
     top: -30px;
@@ -810,20 +817,6 @@
     opacity: 1;
     visibility: visible;
     top: -50px;
-  }
-  
-  .example-1 .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #e2e1e1ea;
-    transition: all 0.3s ease-in-out;
   }
   
   .example-1 .icon-content a:hover {
@@ -875,17 +868,16 @@
   }
   
   .navbar-profile-login {
-    display: flex;                    /* Flexbox para os links */
-    justify-content: center;          /* Centraliza os links horizontalmente */
-    flex-grow: 1;
-    font-weight: bold;
-    font-size: 1.4em;
-    margin-right: 14.5rem;
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+    align-items: center; /* Centraliza verticalmente */
+    flex: 1;
+    gap: 10px; /* Espaço entre login e ícone */
   }
   .navbar-profile-login a {
-    color: rgb(0, 0, 0);                     /* Cor dos links */
-    text-decoration: none;            /* Remove o sublinhado */
-    margin: 0 15px;                  /* Espaçamento horizontal entre os links */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;               /* Espaçamento horizontal entre os links */
   }
   
   .navbar-profile {
