@@ -1,3 +1,4 @@
+/* #region Responsivo Normal */
 .banner-section-sobre {
   display: flex;
   align-items: center;
@@ -5,7 +6,6 @@
   height: 60vh;
   width: 100%;
 }
-
 
 .banner-content-sobre {
   flex: 1; /* O texto ocupa o espaço disponível */
@@ -16,7 +16,7 @@
 }
 
 .banner-section-sobre .image-container {
-  flex: 0 1 30%; /* A imagem ocupa 40% da largura */
+  flex: 0 1 30%; /* A imagem ocupa 30% da largura */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,50 +144,304 @@
 .welcome{
   font-weight: bold;
 }
+/* #endregion Responsivo Normal */
 
+/* #region Responsivo 1200px */
 @media screen and (max-width: 1200px) {
-  .banner-section-sobre, .como-comecou-section {
-    flex-direction: column;
+  .banner-section-sobre {
+    display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: space-between; /* Garante que texto e imagem fiquem separados */
+    height: 60vh;
+    width: 100%;
   }
-
-  .banner-content-sobre h1 {
-    font-size: 2.5em;
+  
+  
+  .banner-content-sobre {
+    flex: 1; /* O texto ocupa o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
   }
-}
-
-@media screen and (max-width: 768px) {
-  .banner-content-sobre h1 {
-    margin-left: 0;
-    text-align: center;
-    font-size: 2em;
+  
+  .banner-section-sobre .image-container {
+    flex: 0 1 30%; /* A imagem ocupa 30% da largura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  .banner-content-sobre p {
-    margin: 20px;
-    text-align: center;
-    font-size: 1rem;
-  }
-
+  
   .image-container {
-    width: 60%;
-    height: auto;
-    margin: 20px 0;
+    flex: 0 0 50vh; /* Reduz o tamanho da imagem */
+    width: 50vh; /* Garante que a largura seja igual à altura */
+    height: 40vh;
+    background: url('../../assests/images/thamy.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    overflow: hidden; /* Garante que apenas a área circular seja visível */
+    margin-right: 30px;
   }
-}
-
-@media screen and (max-width: 480px) {
+  
   .banner-content-sobre h1 {
-    font-size: 1.8em;
+    font-size: 2em;
+    color: #a12449;
+    margin-left: 80px;
   }
-
   .banner-content-sobre p {
-    font-size: 0.9em;
-  }
-
-  .cta-sobre {
-    padding: 8px 12px;
     font-size: 0.8em;
+    color: #000;
+    margin-right: 20px;
+    margin-left: 90px;
+    margin-top: 0; /* Remove o espaçamento adicional do parágrafo */
+    line-height: 1.5; /* Ajusta a altura da linha para melhorar a legibilidade */
+    font-weight: bold;
+  }
+  
+  /* Estilos para o botão */
+  .cta-sobre {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 100px;
+  }
+  
+  .cta-sobre:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #a12449;
+    width: 56px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-sobre span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #000000;
+  }
+  
+  .cta-sobre svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #000000;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta-sobre:hover:before {
+    width: 100%;
+    background: #a12449;
+  }
+  
+  .cta-sobre:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta-sobre:active {
+    transform: scale(0.95);
+  }
+  
+  /* Como tudo começou */
+  .como-comecou-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('../../assests/images/fundo.svg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .como-comecou-texto{
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .como-comecou-texto h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-left: 50px;
+  }
+  
+  .como-comecou-texto p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: white;
+    margin-left: 3.5rem;
+  }
+  
+  .welcome{
+    font-weight: bold;
   }
 }
+/* #endregion Responsivo 1200px */
+
+/* #region Responsivo 480px */
+@media screen and (max-width: 480px) {
+  .banner-section-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Garante que texto e imagem fiquem separados */
+    height: 60vh;
+    width: 100%;
+  }
+  
+  
+  .banner-content-sobre {
+    flex: 1; /* O texto ocupa o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
+  }
+  
+  .banner-section-sobre .image-container {
+    flex: 0 1 30%; /* A imagem ocupa 30% da largura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    flex: 0 0 50vh; /* Reduz o tamanho da imagem */
+    width: 40vh; /* Garante que a largura seja igual à altura */
+    height: 17vh;
+    background: url('../../assests/images/thamy.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    overflow: hidden; /* Garante que apenas a área circular seja visível */
+    margin-right: 10px;
+  }
+  
+  .banner-content-sobre h1 {
+    font-size: 1em;
+    color: #a12449;
+    margin-left: 20px;
+  }
+  .banner-content-sobre p {
+    font-size: 11px;
+    color: #000;
+    margin-right: 1px;
+    margin-left: 20px;
+    margin-top: 0; /* Remove o espaçamento adicional do parágrafo */
+    line-height: 1.5; /* Ajusta a altura da linha para melhorar a legibilidade */
+    font-weight: bold;
+  }
+  
+  /* Estilos para o botão */
+  .cta-sobre {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  .cta-sobre:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #a12449;
+    width: 56px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-sobre span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #000000;
+  }
+  
+  .cta-sobre svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #000000;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta-sobre:hover:before {
+    width: 100%;
+    background: #a12449;
+  }
+  
+  .cta-sobre:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta-sobre:active {
+    transform: scale(0.95);
+  }
+  
+  /* Como tudo começou */
+  .como-comecou-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: url('../../assests/images/fundo.svg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .como-comecou-texto{
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .como-comecou-texto h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-left: 50px;
+  }
+  
+  .como-comecou-texto p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: white;
+    margin-left: 3.5rem;
+  }
+  
+  .welcome{
+    font-weight: bold;
+  }
+}
+/* #endregion Responsivo 480px */
