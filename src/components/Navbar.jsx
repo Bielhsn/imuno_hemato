@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './css/Navbar.css';
-import logo from '../assests/images/imuno_hemato-logo.png';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./css/Navbar.css";
+import logo from "../assests/images/imuno_hemato-logo.png";
 
-const Navbar = ({userLoggedIn, setUserLoggedIn}) => {
-  const isLoggedIn = !!localStorage.getItem('token'); // Verifica se há token no localStorage
+const Navbar = ({ userLoggedIn, setUserLoggedIn }) => {
+  const isLoggedIn = !!localStorage.getItem("token"); // Verifica se há token no localStorage
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove o token no logout
+    localStorage.removeItem("token"); // Remove o token no logout
     window.location.reload(); // Atualiza a página após o logout
   };
 
@@ -21,12 +21,12 @@ const Navbar = ({userLoggedIn, setUserLoggedIn}) => {
         <Link to="/cursos">Cursos</Link>
         <Link to="/Podcast">ABOcast</Link>
         <Link to="/SobreNos">Sobre</Link>
-        <Link to="https://sso.hotmart.com/login?service=https%3A%2F%2Fsso.hotmart.com%2Foauth2.0%2FcallbackAuthorize%3Fclient_id%3Db432cdd3-eb60-46bd-892b-5b450a65153e%26redirect_uri%3Dhttps%253A%252F%252Fhotmart.com%252Fen%252Fclub%252Fmartell%252Fauth%252Flogin%26response_type%3Dcode%26response_mode%3Dquery%26client_name%3DCasOAuthClient">Login</Link>
+        <Link to="https://sso.hotmart.com/login?service=https%3A%2F%2Fsso.hotmart.com%2Foauth2.0%2FcallbackAuthorize%3Fclient_id%3Db432cdd3-eb60-46bd-892b-5b450a65153e%26redirect_uri%3Dhttps%253A%252F%252Fhotmart.com%252Fen%252Fclub%252Fmartell%252Fauth%252Flogin%26response_type%3Dcode%26response_mode%3Dquery%26client_name%3DCasOAuthClient">
+          Login
+        </Link>
       </div>
 
-
-
-            {/* {isLoggedIn ? (
+      {/* {isLoggedIn ? (
               <>
                     <label className="popup">
         <input type="checkbox" />
@@ -98,19 +98,26 @@ const Navbar = ({userLoggedIn, setUserLoggedIn}) => {
             )} */}
 
       <ul class="example-1">
-              {/* Linkedin */}
-              <li class="icon-content">
-              <a
-                data-social="linkedin"
-                aria-label="linkedin"
-                href="https://www.linkedin.com/company/imuno-hemato/posts/?feedView=all"
-              >
-                <div class="filled"></div>
-                <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
-              </a>
-              <div class="tooltip">Linkedin</div>
-            </li>
-          </ul>
+        {/* Linkedin */}
+        <li class="icon-content">
+          <a
+            data-social="linkedin"
+            aria-label="linkedin"
+            href="https://www.linkedin.com/company/imuno-hemato/posts/?feedView=all"
+          >
+            <div class="filled"></div>
+            <svg
+              viewBox="0 0 24 24"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
+            </svg>
+          </a>
+          <div class="tooltip">Linkedin</div>
+        </li>
+      </ul>
     </nav>
   );
 };

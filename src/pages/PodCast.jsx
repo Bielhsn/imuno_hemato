@@ -155,7 +155,9 @@ const Podcast = () => {
                           alt={episode.title}
                           className="episode-image"
                         />
-                        <span>{episode.title} - {episode.date}</span>
+                        <span>
+                          {episode.title} - {episode.date}
+                        </span>
                       </button>
                     </li>
                   ))}

@@ -1,24 +1,27 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './css/Login.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./css/Login.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Login = ({ setUserLoggedIn }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { username, password });
-      localStorage.setItem('token', response.data.token);
-      navigate('/');
+      const response = await axios.post("http://localhost:5000/api/login", {
+        username,
+        password,
+      });
+      localStorage.setItem("token", response.data.token);
+      navigate("/");
     } catch (error) {
-      console.error('Erro ao tentar fazer login:', error);
-      alert('Usuário ou senha incorretos');
+      console.error("Erro ao tentar fazer login:", error);
+      alert("Usuário ou senha incorretos");
     }
   };
 
@@ -50,7 +53,9 @@ const Login = ({ setUserLoggedIn }) => {
                   placeholder="Senha"
                 />
               </div>
-              <button type="submit" className="button-login">Entrar</button>
+              <button type="submit" className="button-login">
+                Entrar
+              </button>
             </form>
           </div>
         </div>
