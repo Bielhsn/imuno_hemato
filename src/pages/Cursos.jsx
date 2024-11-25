@@ -16,7 +16,7 @@ const Cursos = () => {
     <div className="cursos">
       <Navbar />
       {/* Seção do banner */}
-      <section class="cursos-section_banner">
+      <section class="cursos-section_banner container">
         <div class="cursos-texto">
           <h2>Educação sem distância.</h2>
           <p>
@@ -32,7 +32,7 @@ const Cursos = () => {
       {/* Seção dos cursos */}
 
       {/* Seção desvendando hemácias */}
-      <section className="cursos-destaques">
+      <section className="cursos-destaques container">
         <div className="card-hemacias">
           <div className="card-details-hemacias">
             <img src={curso_hemacias} className="img" alt="Curso Hemácias" />
@@ -103,7 +103,7 @@ const Cursos = () => {
         </div>
       </section>
 
-      <section className="cursos-destaques">
+      <section className="cursos-destaques container">
         {/* Seção Transfusão em recém-nascidos e pediatria */}
         <div className="card-hemacias">
           <div className="card-details-hemacias">
