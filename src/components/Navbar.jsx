@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "./css/Navbar.css";
 import logo from "../assests/images/imuno_hemato-logo.png";
 
-const Navbar = ({ userLoggedIn, setUserLoggedIn }) => {
-  const isLoggedIn = !!localStorage.getItem("token"); // Verifica se há token no localStorage
+const Navbar = () => {
+  // const isLoggedIn = !!localStorage.getItem("token"); // Verifica se há token no localStorage
 
-  const handleLogout = () => {
-    localStorage.removeItem("token"); // Remove o token no logout
-    window.location.reload(); // Atualiza a página após o logout
-  };
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token"); // Remove o token no logout
+  //   window.location.reload(); // Atualiza a página após o logout
+  // };
 
   return (
     <nav className="navbar">
