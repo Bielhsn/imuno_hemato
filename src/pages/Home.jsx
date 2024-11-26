@@ -9,6 +9,7 @@ import primeira_temp from "../assests/images/foto_curso_precisamos.png";
 import segunda_temp from "../assests/images/foto_curso_temp2.png";
 import hemoterapia from "../assests/images/hemoterapia_curso.jpg";
 import logo_rosa from "../assests/images/logotipo_preto.png";
+import home_banner from "../assests/images/home_banner.gif";
 
 const Home = () => {
   return (
@@ -29,6 +30,9 @@ const Home = () => {
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
           </button>
+        </div>
+        <div class="cursos-imagem_banner">
+          <img src={home_banner} alt="Cursos"></img>
         </div>
       </section>
 

@@ -16,7 +16,6 @@
   justify-content: flex-start;
   height: 60vh;
   width: 160vh;
-  background: url('../../assests/images/home_banner.gif');
   background-size: auto 100%;
   background-position: right;
   background-repeat: no-repeat;
@@ -481,7 +480,6 @@ ul {
     justify-content: space-between; /* Distribui o espaço entre os itens */
     height: 40vh;
     width: 80%;
-    background: url('../../assests/images/home_banner.gif') no-repeat right; /* Mantém a imagem como background e posiciona à direita */
     background-size: contain; /* Ajusta o tamanho da imagem ao container */
     position: relative;
     padding: 20px;
@@ -928,138 +926,82 @@ ul {
 
 /* #region Responsivo 480px */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (min-width: 320px) {
   .home-container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     margin: 0;
-    padding: 0;
+    padding: 0 10px; /* Adicionado padding para evitar o conteúdo encostar nas bordas */
   }
-  
+
   .banner-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    height: 20vh;
-    width: 90%;
-    background: url('../../assests/images/home_banner.gif') no-repeat right; /* Mantém a imagem como background e posiciona à direita */
-    background-size: contain; /* Ajusta o tamanho da imagem ao container */
-    position: relative;
-    padding: 20px;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: flex-start; /* Mantém os itens alinhados ao topo */
+    width: 100%; /* Garante que a seção ocupe toda a largura */
+    height: auto; /* Ajusta a altura dinamicamente */
+    background-size: contain; /* Ajusta a imagem ao container */
+    padding: 20px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o texto */
   }
-  
+
   .banner-content {
-    flex: 0 1 40%;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
+    z-index: 2; /* Garante que o texto fique acima do background */
+    padding: 15px; /* Adiciona espaçamento interno ao texto */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    margin-bottom: 20px; /* Espaço entre o texto e o restante da seção */
   }
-  
+
   .banner-content h1 {
-    font-size: 1em;
+    font-size: 1.5rem; /* Ajusta o tamanho do título */
     color: #a12449;
-    margin-left: 5px;
+    margin-bottom: 10px;
   }
-  
-  /* Estilos para o botão */
+
+  .banner-content p {
+    font-size: 1rem; /* Ajusta o tamanho da descrição */
+    line-height: 1.4; /* Melhora o espaçamento entre linhas */
+    color: #a12449;
+  }
+
   .cta {
-    position: relative;
-    margin: auto;
-    padding: 10px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: 5px;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
-  
-  .cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #a12449;
-    width: 56px;
-    height: 45px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 13px;
-    font-weight: 100;
-    letter-spacing: 0.05em;
-    color: #000000;
-  }
-  
-  .cta svg {
-    position: relative;
-    top: 5;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #000000;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta:hover:before {
-    width: 100%;
-    background: #a12449;
-  }
-  
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta:active {
-    transform: scale(0.95);
-  }
-  
-  /* Novos estilos para a seção de imagem */
+
   .imagem-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+    display: none; /* Ocultamos a necessidade de uma seção separada, já que a imagem está no background */
+
   }
-  
+
   .imagem-home {
-    max-width: 100%;
+    max-width: 90%; /* Mantém proporção da imagem sem ultrapassar largura */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  /* Novos estilos para a seção de cursos */
+
   .cursos-section {
-    padding: 1px 0px;
-    background-color: #f4f4f4;
-    text-align: center;
+    padding: 20px 10px; /* Ajuste para espaçamento interno */
     background-color: #a80652;
+    text-align: center;
   }
-  
+
   .cursos-titulo {
-    font-size: 25px;
+    font-size: 1.5rem;
     color: white;
-    margin-bottom: -80px;
+    margin-bottom: 20px;
   }
-  
+
   .cursos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 120px;
+    display: flex; /* Substituído grid por flexbox para melhor empilhamento */
+    flex-direction: column; /* Empilha os cards verticalmente */
+    gap: 15px; /* Espaço uniforme entre os cards */
   }
-  
+
   .curso-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -1067,324 +1009,113 @@ ul {
     overflow: hidden;
     text-align: center;
     transition: transform 0.2s ease;
+    width: 100%; /* Ocupa toda a largura disponível */
   }
-  
+
   .curso-card img {
-    width: 100%;
+    width: 100%; /* Garante que a imagem ocupe toda a largura do card */
     height: auto;
     object-fit: cover;
   }
-  
+
   .curso-info {
-    padding: 15px;
+    padding: 10px;
   }
-  
+
   .curso-info p {
-    font-size: 16px;
+    font-size: 0.9rem; /* Reduzido para melhor ajuste */
     font-weight: bold;
     color: #a12449;
     margin-bottom: 10px;
   }
-  
+
   .curso-botao {
-    background-color: #a12449;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    font-size: 0.8rem; /* Reduzido para melhor ajuste */
+    padding: 8px 15px;
   }
-  
-  .curso-botao:hover {
-    background-color: #8a174f;
-  }
-  
-  .curso-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Seção com imagem de fundo */
+
   .sobre-nos-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Empilha o conteúdo em telas menores */
     align-items: center;
-    padding: 30px;
-    background: url('../../assests/images/fundo.svg');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    margin-top: -200px;
-  }
-  
-  .sobre-nos-texto {
-    flex: 1;
     padding: 20px;
+    background: url('../../assests/images/fundo.svg') no-repeat center;
+    background-size: cover; /* Ajusta o background */
+    margin-top: 20px; /* Ajustado o espaçamento */
   }
-  
+
+  .sobre-nos-texto {
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+    padding: 10px;
+  }
+
   .sobre-nos-texto h2 {
-    font-size:1.2em;
+    font-size: 1rem;
     color: white;
-    margin-bottom: 20px;
-    margin-left: -20px;
+    margin-bottom: 15px;
   }
-  
+
   .sobre-nos-texto p {
-    font-size: 0.7em;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    line-height: 1.4;
     color: white;
-    margin-left: -30px;
   }
-  
+
   .sobre-nos-botao {
-    background-color: white;
-    color: #a12449;
-    padding: 15px 20px;
-    border: none;
-    font-size: 0.7em;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    margin-left: -25px;
+    font-size: 0.8rem;
+    padding: 8px 15px;
   }
-  
-  .sobre-nos-botao:hover {
-    background-color: #751d37;
-    color: white;
-  }
-  
-  /* Estilo para a logo */
+
   .sobre-nos-logo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 70px;
+    display: none; /* Oculta a logo para economizar espaço em telas menores */
   }
-  
-  .sobre-nos-logo img {
-    max-width: 90%;
-    height: auto;
-  }
-  
-  /* Seção comunidade */
+
   .community-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 1rem 0;
-    gap: 0rem;
+    flex-direction: column; /* Empilha o conteúdo */
+    gap: 20px;
+    align-items: center;
   }
-  
-  .community-info{
-    width: 48%;
+
+  .community-info {
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
   }
-  
+
   .community-info h2 {
     font-size: 1rem;
     color: #333;
-    margin-left: 1rem;
+    margin: 10px 0;
   }
-  
+
   .community-info p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #666;
-    line-height: 1.2;
-    margin-left: 1.2rem;
+    line-height: 1.4;
   }
-  
+
   .icons {
-    display: flex;
-    gap: 1rem;
-    margin-left: 30rem;
+    margin: 20px 0;
+    justify-content: center;
   }
-  
+
   .icons i {
-    font-size: 2rem;
-    color: #b61952;
-    cursor: pointer;
-    transition: color 0.3s;
+    font-size: 1.5rem; /* Reduzido para ajustar ao tamanho da tela */
   }
-  
-  .icons i:hover {
-    color: #e23b7a;
-  }
-  
-  .contact-info a {
-    color: #b61952;
-    text-decoration: none;
-  }
-  
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-  
+
   .card {
-    position: relative;
-    width: 160px;
-    height: 130px;
-    border-radius: 14px;
-    z-index: 1111;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    margin-right: 4rem; /* Ajustado para diminuir a margem */
-    transform: translateX(50px); /* Move o card mais para a direita */
-  }
-  
-  .card h2{
-    font-size: 1rem;
-    margin-left: 45px;
-  }
-  .card p{
-    font-size: 1rem;
-    margin-left: 15px;
-  }
-  .bg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 160px;
-    height: 130px;
-    z-index: 2;
-    background: rgba(255, 255, 255, .95);
-    backdrop-filter: blur(24px);
-    border-radius: 10px;
-    overflow: hidden;
-    outline: 2px solid white;
-  }
-  
-  .blob {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 160px;
-    height: 130px;
-    border-radius: 50%;
-    background-color: #a12449;
-    opacity: 1;
-    filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
-  }
-  
-  @keyframes blob-bounce {
-    0% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-    }
-  
-    25% {
-      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
-    }
-  
-    50% {
-      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
-    }
-  
-    75% {
-      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-    }
-  
-    100% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-    }
-  }
-  
-  .gmail{
-    margin-top: 5px;
-    margin-right: 10px;
-    margin-left: 35px;
-  }
-  /* Icons */
-  ul {
-    list-style: none;
-  }
-  
-  .example-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 7rem;
-  }
-  .example-2 .icon-content {
-    margin: 0 10px;
-    position: relative;
-  }
-  .example-2 .icon-content .tooltip {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  .example-2 .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    top: -50px;
-  }
-  .example-2 .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-  }
-  .example-2 .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-  }
-  .example-2 .icon-content a:hover {
-    color: white;
-  }
-  .example-2 .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
+    height: auto;
+    margin: 10px 0; /* Espaçamento entre cards */
+    transform: none; /* Remove deslocamento para evitar problemas */
   }
-  .example-2 .icon-content a:hover .filled {
-    height: 100%;
-  }
-  .example-2 .icon-content a[data-social="spotify"] .filled,
-  .example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
-    background-color: #1db954;
-  }
-  .example-2 .icon-content a[data-social="facebook"] .filled,
-  .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
-    background-color: #1877f2;
-  }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-    background-color: #e4405f;
-  }
-  .example-2 .icon-content a[data-social="linkedin"] .filled,
-  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #0274b3;
+
+  .card h2, .card p {
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
   }
 }
+
+
 /* #endregion Responsivo 480px */
