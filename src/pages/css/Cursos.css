@@ -543,159 +543,77 @@ body {
 
   @media (max-width: 768px) and (min-width: 481px) {
     .cursos-section_banner {
-      flex-direction: column;
-      align-items: center;
+      display: flex;
+      flex-direction: column; /* Empilha os itens em telas menores */
+      align-items: center; /* Centraliza os itens horizontalmente */
+      justify-content: center; /* Centraliza os itens verticalmente */
+      background-color: #a01b51;
       padding: 20px;
+      gap: 20px; /* Espaço entre o texto e a imagem */
     }
   
     .cursos-texto {
-      max-width: 100%;
-      text-align: center;
-      margin: 0;
+      flex: none; /* Remove o comportamento flex */
+      max-width: 90%; /* Texto ocupa até 90% da largura disponível */
+      text-align: center; /* Centraliza o texto em telas menores */
+      margin: 0 auto; /* Centraliza o container de texto */
+      padding: 10px;
     }
   
+    .cursos-texto h2 {
+      color: #fff;
+      font-size: 1.5rem; /* Tamanho reduzido do título */
+      margin-bottom: 15px;
+      margin-left: -10px;
+    }
+  
+    .cursos-texto p {
+      font-size: 1rem; /* Tamanho ajustado do texto */
+      line-height: 1.5; /* Melhora o espaçamento entre linhas */
+      color: #fff;
+      margin-left: -10px;
+    }
+  
+    .cursos-imagem_banner img {
+      flex: none;
+      max-width: 80%; /* Limita a largura da imagem */
+      height: auto; /* Mantém a proporção da imagem */
+      margin: 0 auto; /* Centraliza a imagem */
+    }
+    
+    /* Seção dos cursos */
     .cursos-destaques {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  
-    .card-hemacias,
-    .card-primeira,
-    .card-segunda {
-      width: 100%;
-    }
-  }
-  /* #endregion Responsivo 768px até 481px */
-  
-  /* #region Responsivo 480px */
-  @media screen and (max-width: 480px) {
-    .cursos-section_banner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background-color: #a01b51;
+      justify-content: center; /* Ajustado de space-between para center */
+      flex-wrap: wrap; /* Adicionado para permitir quebra de linha */
       padding: 20px;
-  }
-    
-  .cursos-texto {
-      max-width: 50%;
-  }
-    
-  .cursos-texto h2 {
-      color: #fff;
-      font-size: 1em;
-      margin-bottom: 1px;
-      margin-left: 10px;
-  }
-    
-  .cursos-texto p {
-      font-size: 0.7rem;
-      line-height: 1.5;
-      margin-bottom: 20px;
-      margin-left: 18px;
-      color: #fff;
-  }
-    
-  /* Estilos para o botão */
-  .cta-cursos {
-    position: relative;
-    margin: auto;
-    padding: 12px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: 150px;
-  }
+      border-radius: 10px;
+      margin: 20px 0;
+    }
   
-  .cta-cursos:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #000;
-    width: 56px;
-    height: 45px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta-cursos span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #fff;
-  }
-  
-  .cta-cursos svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #fff;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta-cursos:hover:before {
-    width: 100%;
-    background: #000;
-  }
-  
-  .cta-cursos:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta-cursos:active {
-    transform: scale(0.95);
-  }
-    
-  .cursos-imagem_banner img {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 20vh;
-      width: 20vh;
-      background-size: auto 100%;
-      background-position: right;
-      background-repeat: no-repeat;
-      position: relative;
-      margin-right: -25px;
-      border: none;
-      border-radius: 0;
-  }
-    
-  /* Seção dos cursos */
-  
-  .cursos-destaques {
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    padding: 10px;
-  }
-  /* #region Estilos para a seção do curso de hemácias */
-  
-  .card-hemacias {
-      width: 300px;
-      height: 350px; /* Aumentei um pouco a altura para acomodar tudo */
+    /* #region Estilos para a seção do curso de hemácias */
+    .img{
+      width: 100px;
+      height: 80px;
+      object-fit: cover; /* Garante que a imagem não distorça */
+      margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
+      margin-right: 5%;
+    }
+    .card-hemacias {
+      width: 90%; /* Ajustado para responsividade */
+      max-width: 400px;
+      height: 300px;
       border-radius: 20px;
       background: #f5f5f5;
       position: relative;
-      padding: 1.8rem;
+      padding: 1rem;
       border: 2px solid #c3c6ce;
       transition: 0.5s ease-out;
       overflow: visible;
-      margin-left: 3rem;
+      margin: 10px auto; /* Centralizado e com espaçamento */
     }
-    
+  
     .card-details-hemacias {
       display: flex;
       flex-direction: column; /* Alinha os itens de forma vertical */
@@ -703,68 +621,21 @@ body {
       align-items: center; /* Centraliza o conteúdo */
       color: black;
       height: 100%;
-      width: 300px;
     }
-    
-    .img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
+  
+    .text-title-hemacias{
+      font-size: 1.8rem;
+      margin-right: 2%;
     }
-    
-    .text-container-hemacias {
-      display: flex;
-      flex-direction: column; /* Garante que o título fique acima do texto */
-      justify-content: center;
-      text-align: center; /* Centraliza o título e o texto */
-    }
-    
-    .text-title-hemacias {
-      font-size: 1.8em;
-      font-weight: bold;
-      margin: 0; /* Remove qualquer margem extra ao redor do título */
-      margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
-    }
-    
-    .text-body-hemacias {
-      color: rgb(134, 134, 134);
-    }
-    
-    .card-button {
-      transform: translate(-50%, 125%);
-      width: 60%;
-      border-radius: 1rem;
-      border: none;
-      background-color: #a01b51;
-      color: #fff;
+    .text-body-hemacias{
       font-size: 1rem;
-      padding: .5rem 1rem;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      opacity: 0;
-      transition: 0.3s ease-out;
-      cursor: pointer;
+      margin-right: 4%;
     }
-    
-    .card-hemacias:hover {
-      border-color: #a01b51;
-      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-    }
-    
-    .card-hemacias:hover .card-button {
-      transform: translate(-50%, 50%);
-      opacity: 1;
-    }
-    
-    
-  /* #endregion Estilos para a seção do curso de hemácias */
-  
-  /* #region Estilos para a seção do curso de primeira temporada */
-  .card-primeira {
-      width: 300px;
-      height: 350px;
+    /* Ajuste para margem no segundo card */
+    .card-primeira {
+      width: 90%; /* Ajustado para responsividade */
+      max-width: 380px;
+      height: 300px;
       border-radius: 20px;
       background: #f5f5f5;
       position: relative;
@@ -772,53 +643,24 @@ body {
       border: 2px solid #c3c6ce;
       transition: 0.5s ease-out;
       overflow: visible;
-      margin-right: 10rem;
-      margin-left: 3.2rem;
+      margin: 10px auto; /* Centralizado */
     }
-    
-    .card-details-primeira {
-      display: flex;
-      flex-direction: column; /* Alinha os itens de forma vertical */
-      justify-content: space-between; /* Distribui o espaço entre imagem, título e texto */
-      align-items: center; /* Centraliza o conteúdo */
-      color: black;
-      height: 100%;
-      width: 300px;
-    }
-    
-    .text-container-primeira {
-      display: flex;
-      flex-direction: column; /* Garante que o título fique acima do texto */
-      justify-content: center;
-      text-align: center; /* Centraliza o título e o texto */
-    }
-    
-    .text-title-primeira {
-      font-size: 1.8em;
-      font-weight: bold;
-      margin: 0; /* Remove qualquer margem extra ao redor do título */
-      margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
-    }
-    
-    .text-body-primeira {
-      color: rgb(134, 134, 134);
-    }
-    
-    .card-primeira:hover {
-      border-color: #a01b51;
-      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-    }
-    
-    .card-primeira:hover .card-button{
-      transform: translate(-50%, 50%);
-      opacity: 1;
-    }
-  /* #endregion Estilos para a seção do curso de primeira temporada */
   
-  /* #region Estilos para a seção do curso de segunda temporada */
-  .card-segunda {
-      width: 300px;
-      height: 350px;
+    .text-title-primeira{
+      font-size: 1.8rem;
+      margin-right: 1%;
+    }
+  
+    .text-body-primeira{
+      font-size: 1rem;
+      margin-right: 2%;
+    }
+  
+    /* Ajuste para o terceiro card */
+    .card-segunda {
+      width: 90%; /* Ajustado para responsividade */
+      max-width: 380px;
+      height: 400px; /* Ajuste proporcional */
       border-radius: 20px;
       background: #f5f5f5;
       position: relative;
@@ -826,68 +668,162 @@ body {
       border: 2px solid #c3c6ce;
       transition: 0.5s ease-out;
       overflow: visible;
-      margin-left: 3rem;
+      margin: 10px auto; /* Centralizado */
     }
-    
-    .card-details-segunda {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      color: black;
-      height: 100%;
-      width: 300px;
+  
+    .text-title-segunda{
+      font-size: 1.8rem;
+      margin-right: 10%;
     }
-    
-    .text-container-segunda {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
+  
+    .text-body-segunda{
+      font-size: 1rem;
+      margin-right: 12%;
     }
-    
-    .text-title-segunda {
-      font-size: 1.8em;
-      font-weight: bold;
-      margin: 0;
-      margin-bottom: .5rem;
-    }
-    
-    .text-body-segunda {
-      color: rgb(134, 134, 134);
-    }
-    
-    .card-segunda:hover {
-      border-color: #a01b51;
-      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-    }
-    
-    .card-segunda:hover .card-button{
-      transform: translate(-50%, 50%);
-      opacity: 1;
-    }
+  
+    /* Imagem do terceiro card */
     .img-segunda {
-      width: 100px;
+      width: 120px;
       height: 80px;
       object-fit: cover; /* Garante que a imagem não distorça */
       margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-      margin-left: 4rem;
+      margin-right: 5%;
     }
-    
-  /* #endregion Estilos para a seção do curso de segunda temporada */
   
-  .img-rh {
-      width: 180px;
-      height: 80px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-right: 20px;
-      margin-top: 2rem;
-    }
-
-    #card-dominando{
-      height: 30rem;
-
+    /* Correção para evitar rolagem horizontal */
+    body {
+      overflow-x: hidden;
     }
   }
+  /* #endregion Responsivo 768px até 481px */
+  
+  /* #region Responsivo 480px */
+  @media screen and (max-width: 480px) and (min-width: 320px) {
+    .cursos-section_banner {
+      display: flex;
+      flex-direction: column; /* Empilha os itens verticalmente */
+      align-items: center; /* Centraliza os itens horizontalmente */
+      justify-content: center; /* Centraliza os itens verticalmente */
+      background-color: #a01b51;
+      padding: 10px; /* Reduz o padding para telas menores */
+      gap: 15px; /* Espaço entre o texto e a imagem */
+    }
+  
+    .cursos-texto {
+      flex: none; /* Remove o comportamento flex */
+      max-width: 90%; /* Garante que o texto ocupe até 90% da largura disponível */
+      text-align: center; /* Centraliza o texto */
+      margin: 0 auto; /* Centraliza o container de texto */
+      padding: 5px;
+    }
+  
+    .cursos-texto h2 {
+      color: #fff;
+      font-size: 1.4rem; /* Ajusta o tamanho do título */
+      margin-bottom: 10px;
+      margin-left: -10px;
+    }
+  
+    .cursos-texto p {
+      font-size: 0.9rem; /* Reduz o tamanho do texto */
+      line-height: 1.4; /* Melhora o espaçamento entre linhas */
+      color: #fff;
+      margin-left: -10px;
+    }
+  
+    .cursos-imagem_banner img {
+      flex: none;
+      max-width: 80%; /* Limita a largura da imagem */
+      height: auto; /* Mantém a proporção da imagem */
+      margin: 0 auto; /* Centraliza a imagem */
+    }
+  
+    /* Cards de cursos */
+    .cursos-destaques {
+      display: flex;
+      flex-direction: column; /* Empilha os cards */
+      align-items: center;
+      justify-content: center;
+      gap: 20px; /* Espaço entre os cards */
+      padding: 10px;
+    }
+  
+    .card-hemacias,
+    .card-primeira,
+    .card-segunda {
+      width: 95%; /* Ocupa quase toda a largura disponível */
+      max-width: 320px; /* Limita a largura máxima */
+      height: 41vh; /* Ajusta a altura dinamicamente */
+      border-radius: 10px;
+      background: #f5f5f5;
+      position: relative;
+      padding: 10px;
+      border: 1px solid #c3c6ce;
+      transition: 0.5s ease-out;
+      margin: 0 auto; /* Centraliza os cards */
+      box-sizing: border-box; /* Garante que padding e border estejam dentro da largura */
+    }
+  
+    .card-details-hemacias,
+    .card-details-primeira,
+    .card-details-segunda {
+      display: flex;
+      flex-direction: column; /* Alinha os itens verticalmente */
+      justify-content: center;
+      align-items: center;
+      text-align: center; /* Centraliza o conteúdo dentro do card */
+      color: black;
+    }
+  
+    .text-title-hemacias,
+    .text-title-primeira,
+    .text-title-segunda {
+      font-size: 1.2rem; /* Reduzido para telas menores */
+      margin-bottom: 10px;
+      margin-right: 130px;
+    }
+  
+    .text-body-hemacias,
+    .text-body-primeira,
+    .text-body-segunda {
+      font-size: 0.9rem; /* Ajusta o tamanho do texto */
+      line-height: 1.4;
+      margin: 0 auto; /* Remove qualquer margem negativa */
+      text-align: center; /* Garante centralização */
+      margin-right: 130px;
+
+    }
+    
+    .img{
+      width: 100px; /* Ajustado para telas menores */
+      height: 80px;
+      object-fit: cover; /* Garante que a imagem não distorça */
+      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+      margin-right: 120px;
+    }
+
+    .img-rh{
+      width: 200px; /* Ajustado para telas menores */
+      height: 100px;
+      object-fit: cover; /* Garante que a imagem não distorça */
+      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+      margin-right: 140px;
+    }
+    .img-segunda {
+      width: 150px; /* Ajustado para telas menores */
+      height: 80px;
+      object-fit: cover; /* Garante que a imagem não distorça */
+      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+      margin-right: 80px;
+
+    }
+  
+    /* Correção para evitar rolagem horizontal */
+    body {
+      overflow-x: hidden;
+    }
+  }
+  
+  
   /* #endregion Responsivo 480px */
   
