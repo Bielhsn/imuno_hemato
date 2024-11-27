@@ -216,15 +216,16 @@ iframe {
 }
 /* #endregion Responsivo Normal */
 
-/* #region Responsivo 1200px */
-@media screen and (max-width: 1200px) {
+/* #region Responsivo 1200 até até 769 */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
   .podcast-section_banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #a01b51; /* Cor de fundo */
-    padding: 50px 100px; /* Espaçamento interno */
-    height: 60vh; /* Preenche toda a altura visível */
+    padding: 50px 80px; /* Ajuste do espaçamento interno */
+    height: auto; /* Ajuste automático baseado no conteúdo */
+    min-height: 60vh; /* Garante altura mínima */
   }
   
   .podcast-texto {
@@ -255,6 +256,7 @@ iframe {
     display: flex;
     gap: 15px; /* Espaçamento entre os botões */
     margin-top: 15px;
+    flex-wrap: wrap; /* Permite quebrar linha se necessário */
   }
   
   .podcast-btn {
@@ -268,6 +270,7 @@ iframe {
     font-weight: bold;
     color: #000;
     transition: background-color 0.3s ease;
+    background-color: #fff;
   }
   
   .podcast-btn img {
@@ -275,18 +278,8 @@ iframe {
     height: 20px;
   }
   
-  /* Botão do Spotify */
-  .spotify-btn {
-    background-color: #fff;
-  }
-  
   .spotify-btn:hover {
     background-color: #14833b;
-  }
-  
-  /* Botão do Apple Podcasts */
-  .apple-btn {
-    background-color: #fff; 
   }
   
   .apple-btn:hover {
@@ -297,365 +290,485 @@ iframe {
     flex: 1; /* Preenche o espaço restante */
     display: flex;
     justify-content: flex-end; /* Alinha a imagem à direita */
+    align-items: center;
   }
   
   .podcast-imagem_banner img {
     width: 350px; /* Tamanho da imagem */
-    height: 350px; /* Mantém a proporção */
+    height: auto; /* Mantém a proporção */
     object-fit: cover;
-    margin-right: 50px;
-
+    margin-right: -65px;
+    margin-top: -4rem;
   }
   
-/* Section card podcast */
-.podcast-episodes-section {
-  margin: 40px auto;
-  width: 1000px;
-  height: auto; /* Ajusta automaticamente o tamanho baseado no conteúdo */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.podcast-card {
-  font-family: Arial, sans-serif;
-}
-
-.dynamic-player {
-  text-align: center;
-  height: 440px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dynamic-player:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.dynamic-player h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.dynamic-player p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #666;
-}
-
-.spotify-player iframe {
-  border: none;
-  width: 100%;
-  height: 400px;
-  border-radius: 10px;
-}
-
-.episode-list {
-  margin-top: 20px;
-}
-
-.episode-list h3 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-}
-
-.episode-list ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar linha */
-  gap: 20px; /* Espaçamento entre os itens */
-}
-
-.episode-item {
-  width: 200px; /* Largura fixa para cada card */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.episode-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.episode-button {
-  all: unset; /* Remove estilos padrão */
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.episode-image {
-  width: 100%;
-  height: 120px;
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
-  border-bottom: 1px solid #ddd;
-}
-
-.episode-button span {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  padding: 10px;
-  display: block;
-}
-
-.episode-list button {
-  background: none;
-  border: none;
-  color: #a01b51;
-  cursor: pointer;
-  font-size: 1.2em;
-  text-align: left;
-  transition: color 0.2s ease;
-}
-
-.episode-list button:hover {
-  color: #830d37;
-}
-
-iframe {
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-}
-}
-/* #endregion Responsivo 1200px */
-
-/* #region Responsivo 480px */
-
-@media screen and (max-width: 480px) {
-  .podcast-section_banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #a01b51; /* Cor de fundo */
-    padding: 20px 20px; /* Espaçamento interno */
-    height: 60vh; /* Preenche toda a altura visível */
+  /* Section card podcast */
+  .podcast-episodes-section {
+    margin: 40px auto;
+    max-width: 900px; /* Limita a largura máxima */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    height: auto; /* Ajusta automaticamente o tamanho baseado no conteúdo */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex; /* Adicionado para gerenciar layout interno */
+    flex-direction: column; /* Organização vertical */
+    align-items: center; /* Centraliza o conteúdo */
   }
-  
-  .podcast-texto {
-    max-width: 50%;
-    display: flex;
-    flex-direction: column; /* Organiza os elementos na vertical */
-    gap: 20px; /* Espaçamento entre os elementos */
-    color: #fff;
+
+  .podcast-card {
+    font-family: Arial, sans-serif;
   }
-  
-  .podcast-texto h2 {
+
+  .dynamic-player {
+    text-align: center;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .dynamic-player:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .dynamic-player h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .dynamic-player p {
     font-size: 1rem;
-    margin: 0;
+    margin-bottom: 15px;
+    color: #666;
   }
-  
-  .podcast-texto p {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin: 0;
+
+  .spotify-player iframe {
+    width: 100%; /* Mantém o player responsivo */
+    max-width: 600px; /* Limita a largura máxima */
+    height: 300px; /* Ajuste da altura para manter proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 0 auto; /* Centraliza o player */
   }
-  
-  .podcast-subtitle {
-    font-size: 0.8rem;
+
+  .episode-list {
     margin-top: 20px;
   }
-  
+
+  .episode-list h3 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  .episode-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 20px; /* Espaçamento entre os itens */
+  }
+
+  .episode-item {
+    width: 200px; /* Largura fixa para cada card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .episode-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .episode-button {
+    all: unset; /* Remove estilos padrão */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .episode-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    border-bottom: 1px solid #ddd;
+  }
+
+  .episode-button span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    display: block;
+  }
+
+  .episode-list button {
+    background: none;
+    border: none;
+    color: #a01b51;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: left;
+    transition: color 0.2s ease;
+  }
+
+  .episode-list button:hover {
+    color: #830d37;
+  }
+
+  iframe {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+/* #endregion Responsivo 1200 até até 769 */
+
+/* #region Responsivo 768 até 481 */
+@media (max-width: 768px) and (min-width: 481px) {
+  .podcast-section_banner {
+    display: flex;
+    flex-direction: column; /* Organização em coluna para melhor responsividade */
+    align-items: center;
+    justify-content: center;
+    background-color: #a01b51;
+    padding: 30px 20px; /* Reduzido para ajustar melhor em telas menores */
+    height: auto;
+    min-height: 60vh;
+    text-align: center; /* Centraliza texto em telas menores */
+  }
+
+  .podcast-texto {
+    max-width: 90%; /* Ajuste dinâmico para ocupar a tela */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #fff;
+    margin: 0 auto; /* Centraliza o texto */
+  }
+
+  .podcast-texto h2 {
+    font-size: 1.2rem; /* Ajustado para melhor legibilidade */
+    margin: 0;
+  }
+
+  .podcast-texto p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .podcast-subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
   .podcast-buttons {
     display: flex;
-    gap: 15px; /* Espaçamento entre os botões */
+    flex-wrap: wrap;
+    gap: 10px; /* Reduzido para melhorar espaçamento em telas menores */
     margin-top: 15px;
+    justify-content: center; /* Centraliza os botões */
   }
-  
+
   .podcast-btn {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre o logo e o texto */
+    gap: 8px;
     text-decoration: none;
-    padding: 5px 15px;
+    padding: 8px 15px;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #000;
+    background-color: #fff;
     transition: background-color 0.3s ease;
   }
-  
-  .podcast-btn img {
-    width: 15px;
-    height: 15px;
-  }
-  
-  /* Botão do Spotify */
-  .spotify-btn {
-    background-color: #fff;
-  }
-  
+
   .spotify-btn:hover {
     background-color: #14833b;
   }
-  
-  /* Botão do Apple Podcasts */
-  .apple-btn {
-    background-color: #fff; 
-  }
-  
+
   .apple-btn:hover {
     background-color: #d56dfb;
   }
-  
+
   .podcast-imagem_banner {
-    flex: 1; /* Preenche o espaço restante */
     display: flex;
-    justify-content: flex-end; /* Alinha a imagem à direita */
+    justify-content: center; /* Centraliza a imagem */
+    align-items: center;
+    margin-top: 20px; /* Espaçamento entre texto e imagem */
   }
-  
+
   .podcast-imagem_banner img {
-    width: 200px; /* Tamanho da imagem */
-    height: 200px; /* Mantém a proporção */
+    width: 220px; /* Reduzido para se ajustar melhor em telas menores */
+    height: auto;
     object-fit: cover;
-    margin-right: 1px;
-    margin-top: -150px;
-
+    margin-right: 0rem;
   }
-  
-/* Section card podcast */
-.podcast-episodes-section {
-  margin: 40px auto;
-  width: 390px;
-  height: auto; /* Ajusta automaticamente o tamanho baseado no conteúdo */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+
+  /* Section card podcast */
+  .podcast-episodes-section {
+    margin: 20px auto;
+    max-width: 440px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dynamic-player {
+    text-align: center;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Adicionado para espaçamento */
+  }
+
+  .spotify-player iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .episode-list {
+    margin-top: 20px;
+  }
+
+  .episode-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os itens */
+  }
+
+  .episode-item {
+    width: 180px; /* Reduzido para se ajustar melhor ao layout responsivo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .episode-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .episode-image {
+    width: 100%;
+    height: 100px; /* Reduzido para telas menores */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .episode-button span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+  }
+
+  iframe {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 }
 
-.podcast-card {
-  font-family: Arial, sans-serif;
+/* #endregion Responsivo 768 até 481 */
+
+/* #region Responsivo 480 até 320 */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .podcast-section_banner {
+    display: flex;
+    flex-direction: column; /* Organização em coluna para melhor responsividade */
+    align-items: center;
+    justify-content: center;
+    background-color: #a01b51;
+    padding: 20px 10px; /* Reduzido para se ajustar melhor em telas menores */
+    height: auto;
+    min-height: 50vh; /* Altura mínima ajustada */
+    text-align: center; /* Centraliza texto em telas menores */
+  }
+
+  .podcast-texto {
+    max-width: 90%; /* Ajuste dinâmico para ocupar a tela */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento reduzido */
+    color: #fff;
+    margin: 0 auto; /* Centraliza o texto */
+  }
+
+  .podcast-texto h2 {
+    font-size: 1rem; /* Ajustado para melhor legibilidade */
+    margin: 0;
+  }
+
+  .podcast-texto p {
+    font-size: 0.8rem; /* Reduzido para melhor ajuste em telas pequenas */
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .podcast-subtitle {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .podcast-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Espaçamento reduzido para botões */
+    margin-top: 10px;
+    justify-content: center; /* Centraliza os botões */
+  }
+
+  .podcast-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    padding: 6px 10px; /* Ajustado para botões menores */
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+
+  .spotify-btn:hover {
+    background-color: #14833b;
+  }
+
+  .apple-btn:hover {
+    background-color: #d56dfb;
+  }
+
+  .podcast-imagem_banner {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+    align-items: center;
+    margin-top: 15px; /* Espaçamento entre texto e imagem */
+  }
+
+  .podcast-imagem_banner img {
+    width: 180px; /* Reduzido para se ajustar melhor em telas menores */
+    height: auto;
+    object-fit: cover;
+    margin-right: 0; /* Remove margem desnecessária */
+  }
+
+  /* Section card podcast */
+  .podcast-episodes-section {
+    margin: 20px auto;
+    max-width: 90%; /* Ocupa quase toda a largura disponível */
+    width: 100%;
+    padding: 10px; /* Ajustado para telas menores */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dynamic-player {
+    text-align: center;
+    width: 100%; /* Responsivo para telas menores */
+    max-width: 320px; /* Limita o tamanho máximo */
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; /* Reduzido para melhor espaçamento */
+  }
+
+  .spotify-player iframe {
+    width: 100%;
+    max-width: 320px; /* Limita a largura máxima para telas menores */
+    height: 200px; /* Altura ajustada para manter proporção */
+    border-radius: 10px;
+  }
+
+  .episode-list {
+    margin-top: 15px;
+  }
+
+  .episode-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduzido para melhorar o layout */
+    justify-content: center; /* Centraliza os itens */
+  }
+
+  .episode-item {
+    width: 140px; /* Reduzido para se ajustar melhor ao layout responsivo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .episode-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .episode-image {
+    width: 100%;
+    height: 80px; /* Ajustado para telas menores */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .episode-button span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    padding: 8px;
+  }
+
+  iframe {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 }
 
-.dynamic-player {
-  text-align: center;
-  height: 440px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dynamic-player:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.dynamic-player h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.dynamic-player p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #666;
-}
-
-.spotify-player iframe {
-  border: none;
-  width: 100%;
-  height: 400px;
-  border-radius: 10px;
-}
-
-.episode-list {
-  margin-top: 20px;
-}
-
-.episode-list h3 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  margin-left: 50px;
-}
-
-.episode-list ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar linha */
-  gap: 40px; /* Espaçamento entre os itens */
-}
-
-.episode-item {
-  width: 400px; /* Largura fixa para cada card */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.episode-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.episode-button {
-  all: unset; /* Remove estilos padrão */
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.episode-image {
-  width: 100%;
-  height: 120px;
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
-  border-bottom: 1px solid #ddd;
-}
-
-.episode-button span {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  padding: 10px;
-  display: block;
-}
-
-.episode-list button {
-  background: none;
-  border: none;
-  color: #a01b51;
-  cursor: pointer;
-  font-size: 1.2em;
-  text-align: left;
-  transition: color 0.2s ease;
-}
-
-.episode-list button:hover {
-  color: #830d37;
-}
-
-iframe {
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-}
-}
-  /* #endregion Responsivo 480px */
-
+/* #endregion Responsivo 480 até 320 */

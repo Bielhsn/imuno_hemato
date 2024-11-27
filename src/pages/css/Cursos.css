@@ -319,8 +319,8 @@ body {
     margin-top: 2rem;
   }
   /* #endregion Responsivo normal */
-  
-/* #region Responsivo 1200px até 769px  */
+
+ /* #region Responsivo 1200 até 769 */
 @media screen and (max-width: 1200px) and (min-width: 769px) {
   .cursos-section_banner {
     display: flex;
@@ -434,7 +434,6 @@ body {
     margin: 20px 0;
   }
 
-  /* #region Estilos para a seção do curso de hemácias */
   .img{
     width: 100px;
     height: 80px;
@@ -537,9 +536,9 @@ body {
     overflow-x: hidden;
   }
 }
-/* #endregion Responsivo 1200px até 769px  */
+/* #endregion Responsivo 1200 até 769 */
 
-/* #region Responsivo 768px até 481px */
+/* #region Responsivo 768 até 481 */
   @media (max-width: 768px) and (min-width: 481px) {
     .cursos-section_banner {
       display: flex;
@@ -591,7 +590,6 @@ body {
       margin: 20px 0;
     }
   
-    /* #region Estilos para a seção do curso de hemácias */
     .img{
       width: 100px;
       height: 80px;
@@ -694,9 +692,9 @@ body {
       overflow-x: hidden;
     }
   }
-/* #endregion Responsivo 768px até 481px */
+/* #endregion Responsivo 768 até 481 */
   
-  /* #region Responsivo 480px */
+/* #region Responsivo 480 até 320 */
   @media screen and (max-width: 480px) and (min-width: 320px) {
     .cursos-section_banner {
       display: flex;
@@ -824,5 +822,5 @@ body {
   }
   
   
-  /* #endregion Responsivo 480px */
+/* #endregion Responsivo 480 até 320 */
   
