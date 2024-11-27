@@ -540,7 +540,6 @@ body {
 /* #endregion Responsivo 1200px até 769px  */
 
 /* #region Responsivo 768px até 481px */
-
   @media (max-width: 768px) and (min-width: 481px) {
     .cursos-section_banner {
       display: flex;
@@ -695,7 +694,7 @@ body {
       overflow-x: hidden;
     }
   }
-  /* #endregion Responsivo 768px até 481px */
+/* #endregion Responsivo 768px até 481px */
   
   /* #region Responsivo 480px */
   @media screen and (max-width: 480px) and (min-width: 320px) {

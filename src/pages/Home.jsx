@@ -57,27 +57,27 @@ const Home = () => {
               alt="Imuno e Hemato: Preciso mesmo saber disso?"
             />
             <div className="curso-info">
-              <p>Imuno e Hemato: Preciso mesmo saber disso?</p>
+              <p>Preciso mesmo saber disso?</p>
               <a href="https://hotmart.com/pt-br/marketplace/produtos/serie-imuno-e-hemato-1atemporada/S80660889W">
                 <button className="curso-botao">SE INSCREVA AGORA</button>
               </a>
             </div>
           </div>
 
-          <div className="curso-card">
+          <div className="curso-card" id="curso-card-2">
             <img
               src={segunda_temp}
               alt="Imuno e Hemato: A essência da Imuno-Hematologia"
             />
-            <div className="curso-info">
-              <p>Imuno e Hemato: A essência da Imuno-Hematologia</p>
+            <div className="curso-info" >
+              <p id="curso-info-text-essencia">A essência da Imuno-Hematologia</p>
               <a href="https://hotmart.com/pt-br/marketplace/produtos/serie-imuno-e-hemato-2a-temporada/G85816407E">
                 <button className="curso-botao">SE INSCREVA AGORA</button>
               </a>
             </div>
           </div>
 
-          <div className="curso-card">
+          <div className="curso-card"  id="curso-card-2">
             <img src={hemoterapia} alt="Dominando a Hemoterapia" />
             <div className="curso-info">
               <p>Dominando a Hemoterapia</p>
