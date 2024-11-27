@@ -4,6 +4,12 @@ import "./css/Navbar.css";
 import logo from "../assests/images/imuno_hemato-logo.png";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   // const isLoggedIn = !!localStorage.getItem("token"); // Verifica se há token no localStorage
 
   // const handleLogout = () => {
@@ -16,7 +22,11 @@ const Navbar = () => {
       <div className="navbar-logo">
         <img src={logo} alt="Logo" />
       </div>
-      <div className="navbar-links">
+      <div className="menu-button" onClick={toggleMenu}>
+        ☰
+      </div>
+
+      <div className={`navbar-links ${isMenuOpen ? "show" : "hide"}`}>
         <Link to="/">Home</Link>
         <Link to="/cursos">Cursos</Link>
         <Link to="/Podcast">ABOcast</Link>

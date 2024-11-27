@@ -546,7 +546,7 @@ body {
       align-items: center; /* Centraliza os itens horizontalmente */
       justify-content: center; /* Centraliza os itens verticalmente */
       background-color: #a01b51;
-      padding: 20px;
+      padding: 70px;
       gap: 20px; /* Espaço entre o texto e a imagem */
     }
   
@@ -574,9 +574,11 @@ body {
   
     .cursos-imagem_banner img {
       flex: none;
-      max-width: 80%; /* Limita a largura da imagem */
+      max-width: 50%; /* Limita a largura da imagem */
       height: auto; /* Mantém a proporção da imagem */
       margin: 0 auto; /* Centraliza a imagem */
+      height: 30vh;
+      margin-right: 19vh;
     }
     
     /* Seção dos cursos */
@@ -595,7 +597,7 @@ body {
       height: 80px;
       object-fit: cover; /* Garante que a imagem não distorça */
       margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-      margin-right: 5%;
+      margin-right: 4vh;
     }
     .card-hemacias {
       width: 90%; /* Ajustado para responsividade */
@@ -621,18 +623,18 @@ body {
     }
   
     .text-title-hemacias{
-      font-size: 1.8rem;
-      margin-right: 2%;
+      font-size: 1.5rem;
+      margin-right: 4vh;
     }
     .text-body-hemacias{
       font-size: 1rem;
-      margin-right: 4%;
+      margin-right: 4vh;
     }
     /* Ajuste para margem no segundo card */
     .card-primeira {
       width: 90%; /* Ajustado para responsividade */
       max-width: 380px;
-      height: 300px;
+      height: 330px;
       border-radius: 20px;
       background: #f5f5f5;
       position: relative;
@@ -645,12 +647,12 @@ body {
   
     .text-title-primeira{
       font-size: 1.8rem;
-      margin-right: 1%;
+      margin-right: 10vh;
     }
   
     .text-body-primeira{
       font-size: 1rem;
-      margin-right: 2%;
+      margin-right: 10vh;
     }
   
     /* Ajuste para o terceiro card */
@@ -670,12 +672,12 @@ body {
   
     .text-title-segunda{
       font-size: 1.8rem;
-      margin-right: 10%;
+      margin-right: 10vh;
     }
   
     .text-body-segunda{
       font-size: 1rem;
-      margin-right: 12%;
+      margin-right: 10vh;
     }
   
     /* Imagem do terceiro card */
@@ -684,7 +686,7 @@ body {
       height: 80px;
       object-fit: cover; /* Garante que a imagem não distorça */
       margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-      margin-right: 5%;
+      margin-right: 10vh;
     }
   
     /* Correção para evitar rolagem horizontal */
@@ -702,8 +704,8 @@ body {
       align-items: center; /* Centraliza os itens horizontalmente */
       justify-content: center; /* Centraliza os itens verticalmente */
       background-color: #a01b51;
-      padding: 10px; /* Reduz o padding para telas menores */
-      gap: 15px; /* Espaço entre o texto e a imagem */
+      padding: 100px; /* Reduz o padding para telas menores */
+      gap: 80px; /* Espaço entre o texto e a imagem */
     }
   
     .cursos-texto {
@@ -718,23 +720,31 @@ body {
       color: #fff;
       font-size: 1.4rem; /* Ajusta o tamanho do título */
       margin-bottom: 10px;
-      margin-left: -10px;
+      margin-left: -100px;
+      margin-right: -90px;
+      margin-top: -5vh;
     }
   
     .cursos-texto p {
-      font-size: 0.9rem; /* Reduz o tamanho do texto */
+      font-size: 0.8rem; /* Reduz o tamanho do texto */
       line-height: 1.4; /* Melhora o espaçamento entre linhas */
       color: #fff;
-      margin-left: -10px;
+      margin-left: -100px;
+      margin-right: -90px;
+      
     }
   
     .cursos-imagem_banner img {
       flex: none;
-      max-width: 80%; /* Limita a largura da imagem */
+      max-width: 70%; /* Limita a largura da imagem */
       height: auto; /* Mantém a proporção da imagem */
       margin: 0 auto; /* Centraliza a imagem */
+      height: 40vh;
     }
   
+    .cursos-destaques{
+      margin-top: 13vh;
+    }
     /* Cards de cursos */
     .cursos-destaques {
       display: flex;
