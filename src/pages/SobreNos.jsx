@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./css/Sobre.css";
 import logo_rosa from "../assests/images/logotipo_preto.png";
+import thamy_banner from "../assests/images/thamy.jpeg";
+
+
 
 const SobreNos = () => {
   return (
@@ -45,7 +48,9 @@ const SobreNos = () => {
             </svg>
           </button>
         </div>
-        <div class="image-container"></div>
+        <div class="image-container">
+        <img src={thamy_banner} alt="Thamy Caroline de Souza Silva"></img>
+        </div>
       </section>
       {/* Como tudo começou */}
       {/* Seção de "Quem é a imuno&hemato?" */}

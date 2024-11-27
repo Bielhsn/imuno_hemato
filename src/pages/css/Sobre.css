@@ -22,17 +22,19 @@
   align-items: center;
 }
 
-.image-container {
-  flex: 0 0 50vh; /* Reduz o tamanho da imagem */
-  width: 30vh; /* Garante que a largura seja igual à altura */
-  height: 56vh;
-  background: url('../../assests/images/thamy.jpeg');
-  background-size: cover;
-  background-position: center;
+.image-container img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40vh;
+  width: 40vh;
+  background-size: auto 90%;
+  background-position: right;
   background-repeat: no-repeat;
-  border-radius: 50%; /* Deixa a imagem redonda */
-  overflow: hidden; /* Garante que apenas a área circular seja visível */
-  margin-right: 150px;
+  position: relative;
+  margin-right: 220px;
+  border: none;
+  border-radius: 40vh;
 }
 
 .banner-content-sobre h1 {
@@ -146,8 +148,8 @@
 }
 /* #endregion Responsivo Normal */
 
-/* #region Responsivo 1200px */
-@media screen and (max-width: 1200px) {
+/* #region Responsivo 1200 até 769 */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
   .banner-section-sobre {
     display: flex;
     align-items: center;
@@ -155,7 +157,6 @@
     height: 60vh;
     width: 100%;
   }
-  
   
   .banner-content-sobre {
     flex: 1; /* O texto ocupa o espaço disponível */
@@ -172,29 +173,31 @@
     align-items: center;
   }
   
-  .image-container {
-    flex: 0 0 50vh; /* Reduz o tamanho da imagem */
-    width: 50vh; /* Garante que a largura seja igual à altura */
-    height: 40vh;
-    background: url('../../assests/images/thamy.jpeg');
-    background-size: cover;
-    background-position: center;
+  .image-container img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30vh;
+    width: 30vh;
+    background-size: auto 90%;
+    background-position: right;
     background-repeat: no-repeat;
-    border-radius: 50%; /* Deixa a imagem redonda */
-    overflow: hidden; /* Garante que apenas a área circular seja visível */
-    margin-right: 30px;
+    position: relative;
+    margin-right: 20px;
+    border: none;
+    border-radius: 40vh;
   }
   
   .banner-content-sobre h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #a12449;
-    margin-left: 80px;
+    margin-left: 3vh;
   }
   .banner-content-sobre p {
     font-size: 0.8em;
     color: #000;
     margin-right: 20px;
-    margin-left: 90px;
+    margin-left: 3vh;
     margin-top: 0; /* Remove o espaçamento adicional do parágrafo */
     line-height: 1.5; /* Ajusta a altura da linha para melhorar a legibilidade */
     font-weight: bold;
@@ -209,7 +212,7 @@
     border: none;
     background: none;
     cursor: pointer;
-    margin-left: 100px;
+    margin-left: 3vh;
   }
   
   .cta-sobre:before {
@@ -278,170 +281,258 @@
   }
   
   .como-comecou-texto h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: white;
-    margin-left: 50px;
+    margin-left: -3vh;
   }
   
   .como-comecou-texto p {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.6;
     color: white;
-    margin-left: 3.5rem;
+    margin-left: -3vh;
   }
   
   .welcome{
     font-weight: bold;
   }
 }
-/* #endregion Responsivo 1200px */
+/* #endregion Responsivo 1200 até 769 */
 
-/* #region Responsivo 480px */
-@media screen and (max-width: 480px) {
+/* #region Responsivo 768 até 481 */
+@media (max-width: 768px) and (min-width: 481px) {
   .banner-section-sobre {
     display: flex;
+    flex-direction: column; /* Organiza texto e imagem em coluna para melhor responsividade */
     align-items: center;
-    justify-content: space-between; /* Garante que texto e imagem fiquem separados */
-    height: 60vh;
+    justify-content: center;
+    height: auto; /* Ajusta altura dinamicamente com base no conteúdo */
     width: 100%;
+    padding: 20px; /* Adicionado espaçamento interno */
   }
-  
-  
+
   .banner-content-sobre {
-    flex: 1; /* O texto ocupa o espaço disponível */
+    flex: none; /* Texto ajusta automaticamente sem ocupar espaço fixo */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
+    align-items: center; /* Centraliza texto */
+    text-align: center; /* Centraliza texto dentro da área */
+    padding: 10px; /* Reduzido para melhor ajuste */
   }
-  
+
+  .banner-content-sobre h1 {
+    font-size: 1.5em; /* Aumentado para melhor legibilidade */
+    color: #a12449;
+    margin: 10px 0; /* Espaçamento uniforme */
+  }
+
+  .banner-content-sobre p {
+    font-size: 1em; /* Ajuste de fonte para responsividade */
+    color: #000;
+    margin: 10px 2px; /* Espaçamento uniforme */
+    line-height: 1.6; /* Melhor legibilidade */
+    font-weight: bold;
+    margin-right: 2vh;
+  }
+
   .banner-section-sobre .image-container {
-    flex: 0 1 30%; /* A imagem ocupa 30% da largura */
+    flex: none; /* Imagem ajusta automaticamente sem ocupar espaço fixo */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px; /* Espaçamento entre texto e imagem */
   }
-  
-  .image-container {
-    flex: 0 0 50vh; /* Reduz o tamanho da imagem */
-    width: 40vh; /* Garante que a largura seja igual à altura */
-    height: 17vh;
-    background: url('../../assests/images/thamy.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%; /* Deixa a imagem redonda */
-    overflow: hidden; /* Garante que apenas a área circular seja visível */
-    margin-right: 10px;
+
+  .image-container img {
+    height: 350px; /* Ajusta altura proporcionalmente */
+    width: 350px; /* Tamanho reduzido para telas menores */
+    object-fit: cover;
+    border-radius: 50%; /* Garante bordas arredondadas */
+    margin-left: 25vh;
   }
-  
-  .banner-content-sobre h1 {
-    font-size: 1em;
-    color: #a12449;
-    margin-left: 20px;
-  }
-  .banner-content-sobre p {
-    font-size: 11px;
-    color: #000;
-    margin-right: 1px;
-    margin-left: 20px;
-    margin-top: 0; /* Remove o espaçamento adicional do parágrafo */
-    line-height: 1.5; /* Ajusta a altura da linha para melhorar a legibilidade */
-    font-weight: bold;
-  }
-  
+
   /* Estilos para o botão */
   .cta-sobre {
-    position: relative;
-    margin: auto;
-    padding: 12px 18px;
-    transition: all 0.2s ease;
+    margin: 20px 0; /* Espaçamento acima e abaixo do botão */
+    padding: 10px 20px;
     border: none;
-    background: none;
+    background-color: #a12449; /* Cor de fundo para contraste */
+    color: #fff; /* Cor do texto para contraste */
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 25px;
     cursor: pointer;
-    margin-left: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
-  
-  .cta-sobre:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #a12449;
-    width: 56px;
-    height: 45px;
-    transition: all 0.3s ease;
+
+  .cta-sobre:hover {
+    background-color: #8a174f; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
   }
-  
+
   .cta-sobre span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #000000;
+    font-size: 1em; /* Ajuste de tamanho para o texto do botão */
   }
-  
-  .cta-sobre svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #000000;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta-sobre:hover:before {
-    width: 100%;
-    background: #a12449;
-  }
-  
-  .cta-sobre:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta-sobre:active {
-    transform: scale(0.95);
-  }
-  
-  /* Como tudo começou */
+
+  /* Seção "Como tudo começou" */
   .como-comecou-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Organiza em coluna para melhor responsividade */
     align-items: center;
-    padding: 40px;
-    background: url('../../assests/images/fundo.svg');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
+    padding: 30px; /* Reduzido para melhor ajuste */
+    background: url('../../assests/images/fundo.svg') no-repeat ;
+    background-size: cover; /* Garante que o fundo ocupe toda a área */
   }
-  
-  
-  .como-comecou-texto{
-    flex: 1;
-    padding: 20px;
+
+  .como-comecou-texto {
+    flex: none; /* Texto ajusta automaticamente sem ocupar espaço fixo */
+    padding: 10px; /* Reduzido para melhor ajuste */
+    text-align: center; /* Centraliza texto */
   }
-  
+
   .como-comecou-texto h2 {
-    font-size: 2.5em;
-    color: white;
-    margin-left: 50px;
+    font-size: 1.8em; /* Ajustado para melhor legibilidade */
+    color: #fff;
+    margin-bottom: 15px;
+    margin-right: 2vh;
   }
-  
+
   .como-comecou-texto p {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.6;
-    color: white;
-    margin-left: 3.5rem;
+    color: #fff;
+    margin-right: 2vh;
+
   }
-  
-  .welcome{
+
+  .welcome {
     font-weight: bold;
   }
+
+  .sobre-nos-logo{
+    width: 20vh;
+  }
 }
-/* #endregion Responsivo 480px */
+
+/* #endregion Responsivo 768 até 481 */
+
+/* #region Responsivo 480 até 320 */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .banner-section-sobre {
+    display: flex;
+    flex-direction: column; /* Organiza texto e imagem em coluna para melhor responsividade */
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Ajusta altura dinamicamente com base no conteúdo */
+    width: 100%;
+    padding: 20px; /* Adicionado espaçamento interno */
+  }
+
+  .banner-content-sobre {
+    flex: none; /* Texto ajusta automaticamente sem ocupar espaço fixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza texto */
+    text-align: center; /* Centraliza texto dentro da área */
+    padding: 10px; /* Reduzido para melhor ajuste */
+  }
+
+  .banner-content-sobre h1 {
+    font-size: 1.2em; /* Aumentado para melhor legibilidade */
+    color: #a12449;
+    margin: 10px 0; /* Espaçamento uniforme */
+    margin-right: 4vh;
+  }
+
+  .banner-content-sobre p {
+    font-size: 1em; /* Ajuste de fonte para responsividade */
+    color: #000;
+    margin: 10px 2px; /* Espaçamento uniforme */
+    line-height: 1.6; /* Melhor legibilidade */
+    font-weight: bold;
+    margin-right: 2vh;
+  }
+
+  .banner-section-sobre .image-container {
+    flex: none; /* Imagem ajusta automaticamente sem ocupar espaço fixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espaçamento entre texto e imagem */
+  }
+
+  .image-container img {
+    height: 300px; /* Ajusta altura proporcionalmente */
+    width: 300px; /* Tamanho reduzido para telas menores */
+    object-fit: cover;
+    border-radius: 50%; /* Garante bordas arredondadas */
+    margin-left: 20vh;
+  }
+
+  /* Estilos para o botão */
+  .cta-sobre {
+    margin: 20px 0; /* Espaçamento acima e abaixo do botão */
+    margin-left: -5vh;
+    padding: 10px 20px;
+    border: none;
+    background-color: #a12449; /* Cor de fundo para contraste */
+    color: #fff; /* Cor do texto para contraste */
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .cta-sobre:hover {
+    background-color: #8a174f; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
+  }
+
+  .cta-sobre span {
+    font-size: 1em; /* Ajuste de tamanho para o texto do botão */
+  }
+
+  /* Seção "Como tudo começou" */
+  .como-comecou-section {
+    display: flex;
+    flex-direction: column; /* Organiza em coluna para melhor responsividade */
+    align-items: center;
+    padding: 30px; /* Reduzido para melhor ajuste */
+    background: url('../../assests/images/fundo.svg') no-repeat ;
+    background-size: cover; /* Garante que o fundo ocupe toda a área */
+  }
+
+  .como-comecou-texto {
+    flex: none; /* Texto ajusta automaticamente sem ocupar espaço fixo */
+    padding: 10px; /* Reduzido para melhor ajuste */
+    text-align: center; /* Centraliza texto */
+  }
+
+  .como-comecou-texto h2 {
+    font-size: 1.8em; /* Ajustado para melhor legibilidade */
+    color: #fff;
+    margin-bottom: 15px;
+    margin-right: 7vh;
+  }
+
+  .como-comecou-texto p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #fff;
+    margin-right: 7vh;
+
+  }
+
+  .welcome {
+    font-weight: bold;
+  }
+
+  .sobre-nos-logo{
+    width: 25vh;
+    margin-right: 2vh;
+  }
+}
+/* #endregion Responsivo 480 até 320 */
