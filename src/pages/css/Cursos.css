@@ -120,7 +120,7 @@ body {
 
 .card-hemacias {
     width: 400px;
-    height: 350px;
+    height: 380px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -159,7 +159,7 @@ body {
     font-size: 1.8em;
     font-weight: bold;
     margin: 0; /* Remove qualquer margem extra ao redor do título */
-    margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
+    margin-bottom: 2.5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
   }
   
   .text-body-hemacias {
@@ -199,7 +199,7 @@ body {
 /* #region Estilos para a seção do curso de primeira temporada */
 .card-primeira {
     width: 400px;
-    height: 350px;
+    height: 380px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -232,11 +232,14 @@ body {
     font-size: 2em;
     font-weight: bold;
     margin: 0; /* Remove qualquer margem extra ao redor do título */
-    margin-bottom: .5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
+    margin-bottom: 2.5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
+    margin-top: 5rem;
   }
   
   .text-body-primeira {
     color: rgb(134, 134, 134);
+    margin-bottom: 2.5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
+
   }
   
   .card-primeira:hover {
@@ -253,7 +256,7 @@ body {
 /* #region Estilos para a seção do curso de segunda temporada */
 .card-segunda {
     width: 400px;
-    height: 350px; /* Aumentei um pouco a altura para acomodar tudo */
+    height: 380px; /* Aumentei um pouco a altura para acomodar tudo */
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -302,30 +305,37 @@ body {
     opacity: 1;
   }
   .img-segunda {
-    width: 100px;
-    height: 80px;
+    width: 200px;
+    height: 120px;
     object-fit: cover; /* Garante que a imagem não distorça */
     margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-    margin-left: 4rem;
+    margin-left: 8rem;
   }
   
 /* #endregion Estilos para a seção do curso de segunda temporada */
 
 .img-rh {
-    width: 180px;
-    height: 80px;
+    width: 300px;
+    height: 180px;
     object-fit: cover; /* Garante que a imagem não distorça */
     margin-right: 20px;
-    margin-top: 2rem;
+    margin-top: -1rem;
+    margin-bottom: -7rem;
   }
 
   .img-dominando{
     width: 140px; /* Ajustado para telas menores */
     height: 140px;
     object-fit: cover; /* Garante que a imagem não distorça */
-    margin-bottom: 24.5rem; /* Espaço entre a imagem e o texto */
-    margin-right: 6.5rem;
     margin-top: -1rem;
+  }
+
+  .img{
+    width: 150px;
+    height: 120px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    margin-top: -1rem;
+    margin-bottom: -7rem;
   }
   /* #endregion Responsivo normal */
 
@@ -777,7 +787,9 @@ body {
       max-width: 70%; /* Limita a largura da imagem */
       height: auto; /* Mantém a proporção da imagem */
       margin: 0 auto; /* Centraliza a imagem */
-      height: 40vh;
+      height: 20vh !important;
+      margin-top: -4rem;
+      margin-left: 3rem !important;
     }
   
     .cursos-destaques{
@@ -793,6 +805,14 @@ body {
       padding: 10px;
     }
   
+    .card-hemacias{
+      margin-top: -5rem !important;
+    }
+    #card-480{
+      height: 41vh; /* Ajusta a altura dinamicamente */
+
+    }
+
     .card-hemacias,
     .card-primeira,
     .card-segunda {
@@ -825,7 +845,12 @@ body {
     .text-title-segunda {
       font-size: 1.2rem; /* Reduzido para telas menores */
       margin-bottom: 10px;
-      margin-right: 130px;
+      margin-right: 110px;
+    }
+
+    #text-title-primeira-480{
+      margin-top: 10px;
+
     }
   
     .text-body-hemacias,
@@ -835,31 +860,36 @@ body {
       line-height: 1.4;
       margin: 0 auto; /* Remove qualquer margem negativa */
       text-align: center; /* Garante centralização */
-      margin-right: 130px;
+      margin-right: 110px;
 
     }
     
+    #img-480{
+      margin-top: -5rem; /* Espaço entre a imagem e o texto */
+    }
+
     .img{
-      width: 100px; /* Ajustado para telas menores */
-      height: 80px;
+      width: 150px; /* Ajustado para telas menores */
+      height: 100px;
       object-fit: cover; /* Garante que a imagem não distorça */
       margin-bottom: 10px; /* Espaço entre a imagem e o texto */
       margin-right: 120px;
     }
 
     .img-rh{
-      width: 200px; /* Ajustado para telas menores */
-      height: 100px;
+      width: 370px; /* Ajustado para telas menores */
+      height: 220px;
       object-fit: cover; /* Garante que a imagem não distorça */
       margin-bottom: 10px; /* Espaço entre a imagem e o texto */
       margin-right: 140px;
+      margin-top: 6rem;
     }
     .img-segunda {
       width: 150px; /* Ajustado para telas menores */
       height: 80px;
       object-fit: cover; /* Garante que a imagem não distorça */
       margin-bottom: 10px; /* Espaço entre a imagem e o texto */
-      margin-right: 80px;
+      margin-right: 140px;
 
     }
 

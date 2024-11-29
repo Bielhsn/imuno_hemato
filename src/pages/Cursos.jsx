@@ -4,12 +4,12 @@ import Navbar from "../components/Navbar"; // Importando a Navbar
 import Footer from "../components/Footer"; // Importando o Footer
 import "./css/Cursos.css"; // Importando o CSS da página de Cursos
 import curso_banner from "../assests/images/curso_banner.gif";
-import curso_hemacias from "../assests/images/hemacias.gif";
-import curso_primeira_temp from "../assests/images/primeira_temp.gif";
-import curso_segunda_temp from "../assests/images/segunda_temp.gif";
-import curso_terceira_temp from "../assests/images/terceira_temp.gif";
-import curso_rh from "../assests/images/rh.gif";
-import curso_genotipagem from "../assests/images/genotipagem.gif";
+import curso_hemacias from "../assests/images/curso_hemacias.png";
+import curso_primeira_temp from "../assests/images/foto_curso_precisamos.png";
+import curso_segunda_temp from "../assests/images/foto_curso_temp2.png";
+import curso_terceira_temp from "../assests/images/rn.png";
+import curso_rh from "../assests/images/rh-curso.png";
+import curso_genotipagem from "../assests/images/hemoterapia_curso.jpg";
 
 const Cursos = () => {
   return (
@@ -34,8 +34,8 @@ const Cursos = () => {
       {/* Seção desvendando hemácias */}
       <section className="cursos-destaques container">
         <div className="card-hemacias">
-          <div className="card-details-hemacias">
-            <img src={curso_hemacias} className="img" alt="Curso Hemácias" />
+          <div className="card-details-hemacias" id= "card-480">
+            <img src={curso_hemacias} className="img" alt="Curso Hemácias" id= "img-480" />
             <div className="text-container-hemacias">
               <p className="text-title-hemacias">
                 Desvendando o painel de hemácias
@@ -61,7 +61,7 @@ const Cursos = () => {
               alt="Primeira temporada"
             />
             <div className="text-container-primeira">
-              <p className="text-title-primeira">
+              <p className="text-title-primeira" id="text-title-primeira-480">
                 {" "}
                 Imuno e hemato: Por onde começar?
               </p>

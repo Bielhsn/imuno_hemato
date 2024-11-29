@@ -445,6 +445,11 @@ ul {
 .example-2 .icon-content a:hover .filled {
   height: 100%;
 }
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #00d757;
+}
+
 .example-2 .icon-content a[data-social="spotify"] .filled,
 .example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
   background-color: #1db954;
@@ -857,7 +862,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 7rem;
+    margin-left: 7.5rem;
   }
   .example-2 .icon-content {
     margin: 0 10px;
@@ -1340,7 +1345,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 7rem;
+    margin-left: 7.5rem;
   }
   .example-2 .icon-content {
     margin: 0 10px;
@@ -1459,14 +1464,16 @@ ul {
     margin-left: -1rem;
   }
 
-  .cursos-imagem_banner{
+  .cursos-imagem_banner {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 30vh;
-    width: 90vh;
-    position: relative;
-    margin-right: -18vh;
+    justify-content: flex-end;
+    align-items: center; /* Alinha a imagem verticalmente ao centro */
+  }
+  
+  .cursos-imagem_banner img {
+    height: 18vh !important;
+    width: 50vh !important;
+    margin-left: 19vh !important;
     border: none;
     border-radius: 0;
   }
@@ -1824,7 +1831,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 6rem;
+    margin-left: 7.5rem;
   }
   .example-2 .icon-content {
     margin: 0 10px;
