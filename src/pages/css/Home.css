@@ -499,99 +499,32 @@ ul {
   }
   
   .banner-content h1 {
-    font-size: 2.3em;
+    font-size: 3em;
     color: #a12449;
-    margin-left: 1px;
+    margin-left: 60px;
   }
 
-  .cursos-imagem_banner{
+  .cursos-imagem_banner {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    height: 10vh;
-    width: 40vh;
-    background-size: auto 100%;
-    background-position: right;
-    background-repeat: no-repeat;
+    justify-content: center; /* Centraliza a imagem */
+    width: auto; /* Mantém a proporção da largura */
+    max-width: 90%; /* Ajusta a largura máxima */
+    background-size: contain; /* Mantém a proporção */
+    background-position: center; /* Centraliza o background */
+    background-repeat: no-repeat; /* Evita repetição */
+    margin-left: 3rem; /* Espaço à direita */
     position: relative;
-    margin-right: 10px;
     border: none;
     border-radius: 0;
+
+  }
+  .cursos-imagem_banner img {
+    height: 50vh !important; /* Define a altura */
+    width: 50vh !important; /* Mantém a proporção */
+    max-width: 100%; /* Evita que ultrapasse o contêiner */
   }
   
-  /* Estilos para o botão */
-  .cta {
-    position: relative;
-    margin: auto;
-    padding: 12px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: 1px;
-  }
-  
-  .cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #a12449;
-    width: 56px;
-    height: 45px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #000000;
-  }
-  
-  .cta svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #000000;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta:hover:before {
-    width: 100%;
-    background: #a12449;
-  }
-  
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta:active {
-    transform: scale(0.95);
-  }
-  
-  /* Novos estilos para a seção de imagem */
-  .imagem-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-  }
-  
-  .imagem-home {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
   
   /* Novos estilos para a seção de cursos */
   .cursos-section {
@@ -974,9 +907,9 @@ ul {
   }
   
   .banner-content h1 {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #a12449;
-    margin-left: 50px;
+    margin-left: 20px;
   }
 
   .cursos-imagem_banner{
@@ -992,66 +925,6 @@ ul {
     margin-right: -31vh;
     border: none;
     border-radius: 0;
-  }
-  
-  /* Estilos para o botão */
-  .cta {
-    position: relative;
-    margin: auto;
-    padding: 7px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: 50px;
-  }
-  
-  .cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #a12449;
-    width: 56px;
-    height: 45px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #000000;
-  }
-  
-  .cta svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #000000;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta:hover:before {
-    width: 100%;
-    background: #a12449;
-  }
-  
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta:active {
-    transform: scale(0.95);
   }
   
   /* Novos estilos para a seção de imagem */
@@ -1440,116 +1313,43 @@ ul {
   
   .banner-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    width: 80%;
+    flex-direction: column; /* Empilha itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Mantém alinhado ao topo */
+    width: 100%; /* Garante que use a largura completa */
     background-size: contain; /* Ajusta o tamanho da imagem ao container */
     position: relative;
     padding: 20px;
-    margin-top: -10rem;
   }
-  
+
   .banner-content {
-    flex: 0 1 10%;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 0 1 auto; /* Ajusta o tamanho automaticamente */
+    text-align: center; /* Centraliza o texto */
+    padding-bottom: 10px; /* Espaço abaixo do texto */
     z-index: 1;
   }
-  
+
   .banner-content h1 {
-    font-size: 1em;
+    font-size: 1.5em; /* Ajusta o tamanho da fonte */
     color: #a12449;
-    margin-left: -1rem;
+    margin-bottom: 20px; /* Espaço abaixo do texto */
+    margin-right: 25rem; /* Remove o deslocamento à direita */
   }
 
   .cursos-imagem_banner {
     display: flex;
-    justify-content: flex-end;
-    align-items: center; /* Alinha a imagem verticalmente ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    margin-top: 20px; /* Espaço acima da imagem */
+    margin-right: 0 !important; /* Remove o deslocamento à direita */
   }
-  
+
   .cursos-imagem_banner img {
-    height: 18vh !important;
-    width: 50vh !important;
-    margin-left: 19vh !important;
+    max-width: 80%; /* Ajusta largura para maior responsividade */
+    max-height: auto; /* Ajusta altura automaticamente */
+    object-fit: contain; /* Mantém as proporções */
     border: none;
     border-radius: 0;
-  }
-  
-  /* Estilos para o botão */
-  .cta {
-    position: relative;
-    margin: auto;
-    padding: 7px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: -1rem;
-  }
-  
-  .cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #a12449;
-    width: 56px;
-    height: 45px;
-    transition: all 0.3s ease;
-  }
-  
-  .cta span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 0.8em;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #000000;
-  }
-  
-  .cta svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #000000;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta:hover:before {
-    width: 100%;
-    background: #a12449;
-  }
-  
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta:active {
-    transform: scale(0.95);
-  }
-  
-  /* Novos estilos para a seção de imagem */
-  .imagem-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-  }
-  
-  .imagem-home {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   /* Novos estilos para a seção de cursos */ 

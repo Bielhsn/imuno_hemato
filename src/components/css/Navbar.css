@@ -583,9 +583,12 @@
 /* #region Responsivo 480 até 320 */
 @media screen and (max-width: 480px) and (min-width: 320px) {
   .menu-button {
-    display: block; /* Mostra o botão do menu */
+    display: block; /* Exibe o botão em telas menores */
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001; /* Garante que esteja acima do menu */
   }
-
+  
   .navbar {
     display: flex;
     align-items: center;
@@ -607,17 +610,20 @@
     flex-direction: column;
     gap: 10px;
     background-color: #e2e1e1ea;
-    position: absolute;
+    position: absolute; /* Garante que o menu seja sobreposto */
     top: 60px;
     left: 0;
     right: 0;
+    z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
     padding: 10px;
     border-radius: 0 0 8px 8px;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1); /* Adiciona um efeito de sombra */
   }
+  
   .navbar-links.show {
     display: flex; /* Mostra os links quando o botão é clicado */
   }
-
+  
   .navbar-links.hide {
     display: none; /* Esconde os links */
   }

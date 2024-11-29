@@ -20,16 +20,6 @@ const Home = () => {
       <section className="banner-section">
         <div className="banner-content">
           <h1>Você mais próximo da bancada transfusional!</h1>
-          <button
-            className="cta"
-            onClick={() => (window.location.href = "/cursos")}
-          >
-            <span>Conheça os cursos</span>
-            <svg width="15px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </button>
         </div>
         <div class="cursos-imagem_banner">
           <img src={home_banner} alt="Cursos"></img>
