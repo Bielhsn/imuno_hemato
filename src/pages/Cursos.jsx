@@ -151,7 +151,7 @@ const Cursos = () => {
         {/* Seção Dominando a Hemoterapia */}
         <div className="card-segunda" id="card-dominando">
           <div className="card-details-segunda">
-            <img src={curso_genotipagem} className="img" alt="Curso Hemácias" />
+            <img src={curso_genotipagem} className="img-dominando" alt="Curso Hemácias" />
             <div className="text-container-segunda">
               <p className="text-title-segunda">
                 Dominando a Hemoterapia: Fundamentos e práticas na enfermagem.{" "}

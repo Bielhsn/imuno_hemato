@@ -468,7 +468,7 @@
     width: 300px; /* Tamanho reduzido para telas menores */
     object-fit: cover;
     border-radius: 50%; /* Garante bordas arredondadas */
-    margin-left: 20vh;
+    margin-left: 24vh;
   }
 
   /* Estilos para o botão */
