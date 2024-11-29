@@ -119,8 +119,8 @@ body {
 /* #region Estilos para a seção do curso de hemácias */
 
 .card-hemacias {
-    width: 400px;
-    height: 380px;
+    width: 500px;
+    height: 340px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -139,31 +139,6 @@ body {
     color: black;
     height: 100%;
     width: 400px;
-  }
-  
-  .img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover; /* Garante que a imagem não distorça */
-    margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-  }
-  
-  .text-container-hemacias {
-    display: flex;
-    flex-direction: column; /* Garante que o título fique acima do texto */
-    justify-content: center;
-    text-align: center; /* Centraliza o título e o texto */
-  }
-  
-  .text-title-hemacias {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin: 0; /* Remove qualquer margem extra ao redor do título */
-    margin-bottom: 2.5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
-  }
-  
-  .text-body-hemacias {
-    color: rgb(134, 134, 134);
   }
   
   .card-button {
@@ -198,8 +173,8 @@ body {
 
 /* #region Estilos para a seção do curso de primeira temporada */
 .card-primeira {
-    width: 400px;
-    height: 380px;
+    width: 500px;
+    height: 340px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -210,7 +185,7 @@ body {
     margin-right: 10rem;
     margin-left: 10rem;
   }
-  
+
   .card-details-primeira {
     display: flex;
     flex-direction: column; /* Alinha os itens de forma vertical */
@@ -219,27 +194,6 @@ body {
     color: black;
     height: 100%;
     width: 400px;
-  }
-  
-  .text-container-primeira {
-    display: flex;
-    flex-direction: column; /* Garante que o título fique acima do texto */
-    justify-content: center;
-    text-align: center; /* Centraliza o título e o texto */
-  }
-  
-  .text-title-primeira {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0; /* Remove qualquer margem extra ao redor do título */
-    margin-bottom: 2.5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
-    margin-top: 5rem;
-  }
-  
-  .text-body-primeira {
-    color: rgb(134, 134, 134);
-    margin-bottom: 2.5rem; /* Adiciona um pequeno espaçamento entre o título e o texto */
-
   }
   
   .card-primeira:hover {
@@ -251,12 +205,18 @@ body {
     transform: translate(-50%, 50%);
     opacity: 1;
   }
+  .img{
+    width: 350px;
+    height: 360px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    margin-right: 1rem;
+  }
 /* #endregion Estilos para a seção do curso de primeira temporada */
 
 /* #region Estilos para a seção do curso de segunda temporada */
 .card-segunda {
-    width: 400px;
-    height: 380px; /* Aumentei um pouco a altura para acomodar tudo */
+    width: 500px;
+    height: 340px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -277,24 +237,6 @@ body {
     width: 400px;
   }
   
-  .text-container-segunda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .text-title-segunda {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: .5rem;
-  }
-  
-  .text-body-segunda {
-    color: rgb(134, 134, 134);
-  }
-  
   .card-segunda:hover {
     border-color: #a01b51;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
@@ -305,37 +247,21 @@ body {
     opacity: 1;
   }
   .img-segunda {
-    width: 200px;
-    height: 120px;
-    object-fit: cover; /* Garante que a imagem não distorça */
-    margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-    margin-left: 8rem;
+    width: 350px;
+    height: 360px;
   }
   
 /* #endregion Estilos para a seção do curso de segunda temporada */
 
 .img-rh {
-    width: 300px;
-    height: 180px;
+    width: 350px;
+    height: 360px;
     object-fit: cover; /* Garante que a imagem não distorça */
-    margin-right: 20px;
-    margin-top: -1rem;
-    margin-bottom: -7rem;
   }
 
   .img-dominando{
-    width: 140px; /* Ajustado para telas menores */
-    height: 140px;
-    object-fit: cover; /* Garante que a imagem não distorça */
-    margin-top: -1rem;
-  }
-
-  .img{
-    width: 150px;
-    height: 120px;
-    object-fit: cover; /* Garante que a imagem não distorça */
-    margin-top: -1rem;
-    margin-bottom: -7rem;
+    width: 350px;
+    height: 360px;
   }
   /* #endregion Responsivo normal */
 
@@ -454,11 +380,11 @@ body {
   }
 
   .img{
-    width: 100px;
-    height: 80px;
+    width: 300px;
+    height: 300px;
     object-fit: cover; /* Garante que a imagem não distorça */
-    margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
     margin-right: 12%;
+    margin-top: 1rem;
   }
   .card-hemacias {
     width: 90%; /* Ajustado para responsividade */
@@ -482,19 +408,10 @@ body {
     color: black;
     height: 100%;
   }
-
-  .text-title-hemacias{
-    font-size: 1.8rem;
-    margin-right: 10%;
-  }
-  .text-body-hemacias{
-    font-size: 1rem;
-    margin-right: 12%;
-  }
   /* Ajuste para margem no segundo card */
   .card-primeira {
     width: 90%; /* Ajustado para responsividade */
-    max-width: 400px;
+    max-width: 400px; /* Máxima largura do card */
     height: 400px;
     border-radius: 20px;
     background: #f5f5f5;
@@ -506,21 +423,13 @@ body {
     margin: 10px auto; /* Centralizado */
   }
 
-  .text-title-primeira{
-    font-size: 1.8rem;
-    margin-right: 10%;
-  }
 
-  .text-body-primeira{
-    font-size: 1rem;
-    margin-right: 12%;
-  }
 
   /* Ajuste para o terceiro card */
   .card-segunda {
     width: 90%; /* Ajustado para responsividade */
-    max-width: 400px;
-    height: 480px; /* Ajuste proporcional */
+    max-width: 400px; /* Máxima largura do card */
+    height: 400px;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
@@ -531,32 +440,23 @@ body {
     margin: 10px auto; /* Centralizado */
   }
 
-  .text-title-segunda{
-    font-size: 1.8rem;
-    margin-right: 10%;
-  }
-
-  .text-body-segunda{
-    font-size: 1rem;
-    margin-right: 12%;
-  }
-
   /* Imagem do terceiro card */
   .img-segunda {
-    width: 120px;
-    height: 80px;
-    object-fit: cover; /* Garante que a imagem não distorça */
-    margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-    margin-right: 5%;
+    width: 300px;
+    height: 300px;
+    margin-right: 4rem;
   }
 
   .img-dominando{
-    width: 140px; /* Ajustado para telas menores */
-    height: 140px;
-    object-fit: cover; /* Garante que a imagem não distorça */
-    margin-bottom: 24.5rem; /* Espaço entre a imagem e o texto */
-    margin-right: 6.5rem;
-    margin-top: -1rem;
+    width: 300px;
+    height: 300px;
+    margin-right: 4rem;
+  }
+
+  .img-rh{
+    width: 300px;
+    height: 300px;
+    margin-right: 4rem;
   }
 
   /* Correção para evitar rolagem horizontal */
@@ -622,11 +522,12 @@ body {
     }
   
     .img{
-      width: 150px;
-      height: 150px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 1rem; /* Dá um espaço entre a imagem e o título */
-      margin-right: 7vh;
+      width: 300px;
+      height: 300px;
+      margin-right: 4rem;
+    }
+    #img-480{
+      margin-right: 3rem;
     }
     .card-hemacias {
       width: 90%; /* Ajustado para responsividade */
@@ -651,19 +552,11 @@ body {
       height: 100%;
     }
   
-    .text-title-hemacias{
-      font-size: 1.5rem;
-      margin-right: 4vh;
-    }
-    .text-body-hemacias{
-      font-size: 1rem;
-      margin-right: 4vh;
-    }
     /* Ajuste para margem no segundo card */
     .card-primeira {
       width: 90%; /* Ajustado para responsividade */
-      max-width: 380px;
-      height: 390px;
+      max-width: 400px;
+      height: 400px;
       border-radius: 20px;
       background: #f5f5f5;
       position: relative;
@@ -672,24 +565,13 @@ body {
       transition: 0.5s ease-out;
       overflow: visible;
       margin: 10px auto; /* Centralizado */
-    }
-  
-    .text-title-primeira{
-      font-size: 1.8rem;
-      margin-right: 10vh;
-      margin-top: -6rem;
-    }
-  
-    .text-body-primeira{
-      font-size: 1rem;
-      margin-right: 10vh;
     }
   
     /* Ajuste para o terceiro card */
     .card-segunda {
       width: 90%; /* Ajustado para responsividade */
-      max-width: 380px;
-      height: 550px; /* Ajuste proporcional */
+      max-width: 400px;
+      height: 400px;
       border-radius: 20px;
       background: #f5f5f5;
       position: relative;
@@ -700,41 +582,25 @@ body {
       margin: 10px auto; /* Centralizado */
     }
   
-    .text-title-segunda{
-      font-size: 1.8rem;
-      margin-right: 10vh;
-      margin-top: -25rem;
-    }
-  
-    .text-body-segunda{
-      font-size: 1rem;
-      margin-right: 10vh;
-    }
-  
     /* Imagem do terceiro card */
     .img-segunda {
-      width: 200px;
-      height: 200px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-right: 1vh;
+      width: 300px;
+      height: 300px;
+      margin-right: 4rem;
     }
 
     .img-rh{
-      width: 200px; /* Ajustado para telas menores */
-      height: 180px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
-      margin-right: 7rem;
-      margin-top: -1rem;
+      width: 300px;
+      height: 300px;
+      margin-right: 4rem;
+
     }
 
     .img-dominando{
-      width: 140px; /* Ajustado para telas menores */
-      height: 140px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 24.5rem; /* Espaço entre a imagem e o texto */
-      margin-right: 6.5rem;
-      margin-top: -1rem;
+      width: 300px;
+      height: 300px;
+      margin-right: 4rem;
+
     }
   
     /* Correção para evitar rolagem horizontal */
@@ -809,8 +675,7 @@ body {
       margin-top: -5rem !important;
     }
     #card-480{
-      height: 41vh; /* Ajusta a altura dinamicamente */
-
+      margin-top: 2rem;
     }
 
     .card-hemacias,
@@ -839,67 +704,28 @@ body {
       text-align: center; /* Centraliza o conteúdo dentro do card */
       color: black;
     }
-  
-    .text-title-hemacias,
-    .text-title-primeira,
-    .text-title-segunda {
-      font-size: 1.2rem; /* Reduzido para telas menores */
-      margin-bottom: 10px;
-      margin-right: 110px;
-    }
-
-    #text-title-primeira-480{
-      margin-top: 10px;
-
-    }
-  
-    .text-body-hemacias,
-    .text-body-primeira,
-    .text-body-segunda {
-      font-size: 0.9rem; /* Ajusta o tamanho do texto */
-      line-height: 1.4;
-      margin: 0 auto; /* Remove qualquer margem negativa */
-      text-align: center; /* Garante centralização */
-      margin-right: 110px;
-
-    }
-    
-    #img-480{
-      margin-top: -5rem; /* Espaço entre a imagem e o texto */
-    }
 
     .img{
-      width: 150px; /* Ajustado para telas menores */
-      height: 100px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
-      margin-right: 120px;
+      width: 300px; /* Ajustado para telas menores */
+      height: 300px;
+      margin-right: 6.5rem;
     }
 
     .img-rh{
-      width: 370px; /* Ajustado para telas menores */
-      height: 220px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
-      margin-right: 140px;
-      margin-top: 6rem;
+      width: 300px; /* Ajustado para telas menores */
+      height: 300px;
+      margin-right: 6.5rem;
     }
     .img-segunda {
-      width: 150px; /* Ajustado para telas menores */
-      height: 80px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 10px; /* Espaço entre a imagem e o texto */
-      margin-right: 140px;
-
+      width: 300px; /* Ajustado para telas menores */
+      height: 300px;
+      margin-right: 6.5rem;
     }
 
     .img-dominando{
-      width: 140px; /* Ajustado para telas menores */
-      height: 140px;
-      object-fit: cover; /* Garante que a imagem não distorça */
-      margin-bottom: 24.5rem; /* Espaço entre a imagem e o texto */
+      width: 300px; /* Ajustado para telas menores */
+      height: 300px;
       margin-right: 6.5rem;
-      margin-top: -1rem;
     }
   
     /* Correção para evitar rolagem horizontal */
