@@ -649,13 +649,11 @@ body {
     }
   
     .cursos-imagem_banner img {
-      flex: none;
-      max-width: 70%; /* Limita a largura da imagem */
-      height: auto; /* Mantém a proporção da imagem */
-      margin: 0 auto; /* Centraliza a imagem */
-      height: 20vh !important;
-      margin-top: -4rem;
-      margin-left: 3rem !important;
+      height: 50vh !important; /* Define a altura */
+      width: 40vh !important; /* Mantém a proporção */
+      max-width: 100%; /* Evita que ultrapasse o contêiner */
+      margin-left: 13rem;
+      margin-top: -10rem;
     }
   
     .cursos-destaques{
@@ -681,8 +679,8 @@ body {
     .card-hemacias,
     .card-primeira,
     .card-segunda {
-      width: 95%; /* Ocupa quase toda a largura disponível */
-      max-width: 320px; /* Limita a largura máxima */
+      width: 90%; /* Ocupa quase toda a largura disponível */
+      max-width: 290px; /* Limita a largura máxima */
       height: 41vh; /* Ajusta a altura dinamicamente */
       border-radius: 10px;
       background: #f5f5f5;
@@ -706,26 +704,30 @@ body {
     }
 
     .img{
-      width: 300px; /* Ajustado para telas menores */
+      width: 250px; /* Ajustado para telas menores */
       height: 300px;
-      margin-right: 6.5rem;
+      margin-right: 9.5rem;
+    }
+
+    #img-480{
+      margin-top: -4.5rem;
     }
 
     .img-rh{
-      width: 300px; /* Ajustado para telas menores */
+      width: 250px; /* Ajustado para telas menores */
       height: 300px;
-      margin-right: 6.5rem;
+      margin-right: 9.5rem;
     }
     .img-segunda {
-      width: 300px; /* Ajustado para telas menores */
-      height: 300px;
-      margin-right: 6.5rem;
+      width: 250px; /* Ajustado para telas menores */
+      height: 290px;
+      margin-right: 9.5rem;
     }
 
     .img-dominando{
-      width: 300px; /* Ajustado para telas menores */
+      width: 250px; /* Ajustado para telas menores */
       height: 300px;
-      margin-right: 6.5rem;
+      margin-right: 9.5rem;
     }
   
     /* Correção para evitar rolagem horizontal */

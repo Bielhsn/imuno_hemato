@@ -26,7 +26,7 @@ const Cursos = () => {
           </p>
         </div>
         <div class="cursos-imagem_banner">
-          <img src={curso_banner} alt="Cursos"></img>
+          <img src={curso_banner}  className="img_banner_cursos" alt="Cursos"></img>
         </div>
       </section>
       {/* Seção dos cursos */}
