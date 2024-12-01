@@ -1332,7 +1332,7 @@ ul {
   .banner-content h1 {
     font-size: 1.5em; /* Ajusta o tamanho da fonte */
     color: #a12449;
-    margin-bottom: 20px; /* Espaço abaixo do texto */
+    margin-bottom: 30px; /* Espaço abaixo do texto */
     margin-right: 25rem; /* Remove o deslocamento à direita */
   }
 
@@ -1357,7 +1357,7 @@ ul {
     padding: 10px 1px;
     background-color: #a80652;
     text-align: center;
-    margin-top: -3rem;
+    margin-top: 1rem;
   }
 
   .cursos-titulo {
