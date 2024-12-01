@@ -1340,7 +1340,7 @@ ul {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Alinha verticalmente */
-    margin-top: 20px; /* Espaço acima da imagem */
+    margin-top: 50px; /* Espaço acima da imagem */
     margin-right: 0 !important; /* Remove o deslocamento à direita */
   }
 
@@ -1357,7 +1357,7 @@ ul {
     padding: 10px 1px;
     background-color: #a80652;
     text-align: center;
-    margin-top: -10rem;
+    margin-top: -3rem;
   }
 
   .cursos-titulo {
